@@ -30,18 +30,18 @@
 		<link rel="stylesheet" href="css/custom.css" type="text/css" />
 		<style>
 			@-webkit-keyframes fadeInUp {
-			from {
-			opacity: 0;
-			-webkit-transform: translate3d(0, 70px, 0);
-			transform: translate3d(0, 70px, 0);
-			}
+				from {
+					opacity: 0;
+					-webkit-transform: translate3d(0, 70px, 0);
+					transform: translate3d(0, 70px, 0);
+				}
 			}
 			@keyframes fadeInUp {
-			from {
-			opacity: 0;
-			-webkit-transform: translate3d(0, 70px, 0);
-			transform: translate3d(0, 70px, 0);
-			}
+				from {
+					opacity: 0;
+					-webkit-transform: translate3d(0, 70px, 0);
+					transform: translate3d(0, 70px, 0);
+				}
 			}
 		</style>
 	</head>
@@ -75,7 +75,7 @@
 							<p class="mb-5 lead" data-animate="fadeInUp" data-delay="400" style="line-height: 1.3;">
 								Show must go on
 							</p>
-							<a href="#" data-scrollto="#section-about" data-offset="70"  data-animate="fadeInUp" data-delay="600" class="button m-0 button-circle button-large text-white" style="background-color: #03A2D0;">Register Now<i class="icon-line-arrow-right"></i></a>
+							<a href="registration.php" data-scrollto="#section-about" data-offset="70"  data-animate="fadeInUp" data-delay="600" class="button m-0 button-circle button-large text-white" style="background-color: #03A2D0;">Register Now<i class="icon-line-arrow-right"></i></a>
 						</div>
 						<div class="col-md-6 order-1 order-md-2">
 							<img src="img/logo.png" alt="Yoga Image"  data-animate="fadeInUp slow" data-delay="600">
@@ -110,7 +110,7 @@
 									<div class="emphasis-title">
 										<h2 style="color:white;">Our Pride</h2>
 										<p class="lead topmargin-sm">The Dawn of February brings the season of love to the world but to the sprouts of MCC, it's the season to merry. Deepwoood, the age-old extravagant cultural show, showcasing the beautiful and artistic cultures of MCC.</p>
-										<a href="#" data-scrollto="#section-about" data-offset="70"  data-animate="fadeInUp" data-delay="600" class="button m-0 button-circle button-large text-white" style="background-color: #03A2D0;">Learn More<i class="icon-line-arrow-right"></i></a>
+										<a href="about.php" data-scrollto="#section-about" data-offset="70"  data-animate="fadeInUp" data-delay="600" class="button m-0 button-circle button-large text-white" style="background-color: #03A2D0;">Learn More<i class="icon-line-arrow-right"></i></a>
 									</div>
 								</div>
 							</div>
@@ -173,10 +173,10 @@
 											<p class="mb-2 text-white">
 											<div class='list-group'>
 												<?php
-													$sql = "select name from events where `event_type_id`=1;";
+													$sql = "select event_id, name from events where `event_type_id`=1;";
 													$result = $conn->query($sql);
 													while($event = $result->fetch_assoc()) {	
-														echo "<div class='col'>".$event["name"]."</div>";
+														echo "<a href='registration.php?event_type_id=1&event_id=".$event["event_id"]."' class='col'>".$event["name"]."</a>";
 													}
 												?>
 											</div>
@@ -205,10 +205,10 @@
 											<p class="mb-2 text-white">
 											<ul class="list-group">
 												<?php
-													$sql = "select name from events where `event_type_id`=2;";
+													$sql = "select event_id, name from events where `event_type_id`=2;";
 													$result = $conn->query($sql);
 													while($event = $result->fetch_assoc()) {	
-														echo "<div class='col'>".$event["name"]."</div>";
+														echo "<a href='registration.php?event_type_id=1&event_id=".$event["event_id"]."' class='col'>".$event["name"]."</a>";
 													}
 												?>
 											</ul>
@@ -237,10 +237,10 @@
 											<p class="mb-2 text-white">
 											<ul class="list-group">
 												<?php
-													$sql = "select name from events where `event_type_id`=3;";
+													$sql = "select event_id, name from events where `event_type_id`=3;";
 													$result = $conn->query($sql);
 													while($event = $result->fetch_assoc()) {	
-														echo "<div class='col'>".$event["name"]."</div>";
+														echo "<a href='registration.php?event_type_id=1&event_id=".$event["event_id"]."' class='col'>".$event["name"]."</a>";
 													}
 												?>
 											</ul>
@@ -260,7 +260,7 @@
 							}
 						</script>
 						<br><br><br>
-						<a href="#" class="button button-rounded button-white button-light button-large">Register Now</a>
+						<a href="registration.php" class="button button-rounded button-white button-light button-large">Register Now</a>
 					</div>
 					<div id='gallery_scroll'></div>
 				</div>
@@ -431,70 +431,100 @@
 					</script>
 					<div class="row align-items-stretch">
 						<div class="d-none d-md-block" style="color:white!important;"></div>
-						<div class="col-lg-12">
+						<div class="col-12">
 							<div class="row align-items-stretch grid-border clearfix">
-								<div class="col-lg-4 col-md-6 col-padding">
+								<div class='col-md-1'></div>
+								<div class="col-sm-6 col-md-2 col-padding">
 									<div class="feature-box fbox-center fbox-dark fbox-plain">
-										<div class="fbox-icon">
-											<a href="#">Sponsor Logo</i></a>
-										</div>
-										<div class="fbox-content fbox-content-sm">
-											<h3 style="color:white">Sponsor Name</h3>
-										</div>
-									</div>
-								</div>
-								<div class="col-lg-4 col-md-6 col-padding">
-									<div class="feature-box fbox-center fbox-dark fbox-plain">
-										<div class="fbox-icon">
-											<a href="#">Sponsor Logo</i></a>
-										</div>
-										<div class="fbox-content fbox-content-sm">
-											<h3 style="color:white">Sponsor Name</h3>
-										</div>
-									</div>
-								</div>
-								<div class="col-lg-4 col-md-6 col-padding">
-									<div class="feature-box fbox-center fbox-dark fbox-plain">
-										<div class="fbox-icon">
-											<a href="#">Sponsor Logo</a>
-										</div>
-										<div class="fbox-content fbox-content-sm">
-											<h3 style="color:white">Sponsor Name</h3>
-										</div>
-									</div>
-								</div>
-								<div class="col-lg-4 col-md-6 col-padding">
-									<div class="feature-box fbox-center fbox-dark fbox-plain">
-										<div class="fbox-icon">
-											<a href="#">Sponsor Logo</a>
-										</div>
-										<div class="fbox-content fbox-content-sm">
-											<h3 style="color:white">Sponsor Name</h3>
-										</div>
-									</div>
-								</div>
-								<div class="col-lg-4 col-md-6 col-padding">
-									<div class="feature-box fbox-center fbox-dark fbox-plain">
-										<div class="fbox-icon">
-											<a href="#">Sponsor Logo</a>
-										</div>
-										<div class="fbox-content fbox-content-sm">
-											<h3 style="color:white">Sponsor Name</h3>
-										</div>
-									</div>
-								</div>
-								<div class="col-lg-4 col-md-6 col-padding">
-									
-									<div class="feature-box fbox-center fbox-dark fbox-plain">
-										<div class="fbox-icon">
-											<a href="#">Sponsor Logo</a>
-										</div>
-										<div class="fbox-content fbox-content-sm">
-											<h3 style="color:white">Sponsor Name</h3>
-										</div>
-									</div>
-								</div>
+										
 
+											<a href="#">
+												<img src="img/sponsors/7up.png" style="height:200px;object-fit: contain;">
+											</a>
+										
+									</div>
+								</div>
+								<div class="col-sm-6 col-md-2 col-padding">
+									<div class="feature-box fbox-center fbox-dark fbox-plain">
+											<a href="#">
+												<img src="img/sponsors/airtel.png" style="height:200px;object-fit: contain;">
+											</a>
+									</div>
+								</div>
+								<div class="col-sm-6 col-md-2 col-padding">
+									<div class="feature-box fbox-center fbox-dark fbox-plain">
+										
+											<a href="#">
+												<img src="img/sponsors/bajaj.png" style="height:200px;object-fit: contain;">
+											</a>
+									</div>
+								</div>
+								<div class="col-sm-6 col-md-2 col-padding">
+									<div class="feature-box fbox-center fbox-dark fbox-plain">
+										
+											<a href="#">
+												<img src="img/sponsors/mahindra.png" style="height:200px;object-fit: contain;">
+											</a>
+										
+									</div>
+								</div>
+								<div class="col-sm-6 col-md-2 col-padding">
+									<div class="feature-box fbox-center fbox-dark fbox-plain">
+										
+											<a href="#">
+												<img src="img/sponsors/mrf.png" style="height:200px;object-fit: contain;">
+											</a>
+										
+									</div>
+								</div>
+								<div class='col-md-1'></div>
+								<div class='col-md-1'></div>
+								<div class="col-sm-6 col-md-2 col-padding">
+									<div class="feature-box fbox-center fbox-dark fbox-plain">
+										
+											<a href="#">
+												<img src="img/sponsors/pepsi.png" style="height:200px;object-fit: contain;">
+											</a>
+										
+									</div>
+								</div>
+								<div class="col-sm-6 col-md-2 col-padding">
+									<div class="feature-box fbox-center fbox-dark fbox-plain">
+										
+											<a href="#">
+												<img src="img/sponsors/poorvika.png" style="height:200px;object-fit: contain;">
+											</a>
+										
+									</div>
+								</div>
+								<div class="col-sm-6 col-md-2 col-padding">
+									<div class="feature-box fbox-center fbox-dark fbox-plain">
+										
+											<a href="#">
+												<img src="img/sponsors/sangeetha.png" style="height:200px;object-fit: contain;">
+											</a>
+										
+									</div>
+								</div>
+								<div class="col-sm-6 col-md-2 col-padding">
+									<div class="feature-box fbox-center fbox-dark fbox-plain">
+										
+											<a href="#">
+												<img src="img/sponsors/suzuki.png" style="height:200px;object-fit: contain;">
+											</a>
+										
+									</div>
+								</div>
+								<div class="col-sm-6 col-md-2 col-padding">
+									<div class="feature-box fbox-center fbox-dark fbox-plain">
+										
+											<a href="#">
+												<img src="img/sponsors/zebronics.png" style="height:200px;object-fit: contain;">
+											</a>
+										
+									</div>
+								</div>
+								<div class='col-md-1'></div>
 							</div>
 						</div>
 					</div>

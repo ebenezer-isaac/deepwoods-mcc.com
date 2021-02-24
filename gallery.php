@@ -3,7 +3,7 @@
 	<head>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<title>D E E P W O O D S | About</title>
+		<title>D E E P W O O D S | Gallery</title>
 		<meta name="description" content="Deepwoood, the age-old extravagant cultural show, showcasing the beautiful and artistic cultures of MCC">
 		<meta name="author" content="Ebenezer Isaac">
 		<link rel="icon" type="image/png" href="img/logo_og.png"/>

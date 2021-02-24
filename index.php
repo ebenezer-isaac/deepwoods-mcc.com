@@ -6,14 +6,14 @@
 		<title>D E E P W O O D S</title>
 		<meta name="description" content="Deepwoood, the age-old extravagant cultural show, showcasing the beautiful and artistic cultures of MCC">
 		<meta name="author" content="Ebenezer Isaac">
-		<link rel="icon" type="image/png" href="img/logo.png"/>
+		<link rel="icon" type="image/png" href="img/logo_og.png"/>
 		<meta name="theme-color" content="#000000">
 		<meta name="keywords" content="deepwoods, deep woods, deepwoods mcc, mcc cultural event, mcc event, mcc student union, mcc, deepwoods chennai">
 		<meta property="og:title" content="Deepwoods 2021 | MCC" />
 		<meta property="og:site_name" content="Click To Register Now">
 		<meta property="og:url" content="https://www.ebenezer-isaac.com/demo/deepwoods.in" />
 		<meta property="og:description" content="Extravagant Cultural Show">
-		<meta property="og:image" content="https://www.ebenezer-isaac.com/demo/deepwoods.in/img/logo.png">
+		<meta property="og:image" content="https://www.ebenezer-isaac.com/demo/deepwoods.in/img/logo_og.png">
 		<meta property="og:image:width" content="490" />
 		<meta property="og:image:height" content="490" />
 		<meta property="og:type" content="website" />

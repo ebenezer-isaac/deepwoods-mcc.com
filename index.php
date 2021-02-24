@@ -74,17 +74,17 @@
 						<nav class="primary-menu order-lg-1 col-lg-5 px-0" style="position:inherit;">
 							<ul class="menu-container" data-easing="easeInOutExpo" data-speed="1250" data-offset="35">
 								<li class="menu-item">
-									<a href="#section-home" class="menu-link" data-href="#section-home">
+									<a href="#" id='home_btn' class="menu-link">
 										<div>Home</div>
 									</a>
 								</li>
 								<li class="menu-item">
-									<a href="#section-intro" class="menu-link" data-href="#section-intro">
+									<a href="#" id='intro_btn' class="menu-link">
 										<div>Introduction</div>
 									</a>
 								</li>
 								<li class="menu-item">
-									<a href="registration.html" class="menu-link">
+									<a href="#" class="menu-link">
 										<div>Register</div>
 									</a>
 								</li>
@@ -93,17 +93,17 @@
 						<nav class="primary-menu order-lg-3 col-lg-5 px-0" style="position:inherit;">
 							<div class="menu-container justify-content-lg-end">
 								<li class="menu-item">
-									<a href="#section-events" class="menu-link" data-href="#section-events">
+									<a href="#" id='event_btn' class="menu-link">
 										<div>Events</div>
 									</a>
 								</li>
 								<li class="menu-item">
-									<a href="#section-works" class="menu-link" data-href="#section-works">
+									<a href="#" id='gall_btn' class="menu-link">
 										<div>Gallery</div>
 									</a>
 								</li>
 								<li class="menu-item">
-									<a href="#section-contact" class="menu-link" data-href="#section-contact">
+									<a href="#" id='cont_btn' class="menu-link">
 										<div>Contact</div>
 									</a>
 								</li>
@@ -115,15 +115,12 @@
 			</div>
 			<div class="header-wrap-clone"></div>
 		</header>
-		<!-- #header end -->
-		<!-- Slider
-			============================================= -->
-		<section id="section-home" class="slider-element slider-parallax min-vh-100 include-header dark">
+		<section id="section_home" class="slider-element slider-parallax min-vh-100 include-header dark">
 			<script>
 				if (screen.width <500){
-					document.getElementById("section-home").style.background = "linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)), url('img/gallery/pic_042.jpg') no-repeat center top / 400%";
+					document.getElementById("section_home").style.background = "linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)), url('img/gallery/pic_042.jpg') no-repeat center top / 400%";
 				}else{
-					document.getElementById("section-home").style.background = "linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)), url('img/gallery/pic_042.jpg') no-repeat center top / 100%"
+					document.getElementById("section_home").style.background = "linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)), url('img/gallery/pic_042.jpg') no-repeat center top / 100%"
 				}
 			</script>
 			<div class="slider-inner dark">
@@ -159,7 +156,7 @@
 						</div>
 					</div>
 			<div class="content-wrap py-0">
-				<div id="section-intro" class="section parallax min-vh-100 m-0 border-0 d-flex" >
+				<div id="section_intro" class="section parallax min-vh-100 m-0 border-0 d-flex" >
 					<div class="vertical-middle">
 						<div class="container">
 							<div class="row" >
@@ -184,13 +181,13 @@
 						</div>
 						<script>
 							if (screen.width <500){
-								document.getElementById("section-intro").style.background = "linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)), url('img/gallery/pic_028.jpg') no-repeat center top / 450%";
+								document.getElementById("section_intro").style.background = "linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)), url('img/gallery/pic_028.jpg') no-repeat center top / 450%";
 								document.getElementById("icon_pride1").classList.remove("mt-6");
 								document.getElementById("icon_pride2").classList.remove("mt-6");
 								document.getElementById("icon_pride1").classList.remove("i-xlarge");
 								document.getElementById("icon_pride2").classList.remove("i-xlarge");
 							}else{
-								document.getElementById("section-intro").style.background = "linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)), url('img/gallery/pic_028.jpg') no-repeat right top / 120%"
+								document.getElementById("section_intro").style.background = "linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)), url('img/gallery/pic_028.jpg') no-repeat right top / 120%"
 							}
 						</script>
 					</div>
@@ -201,12 +198,12 @@
 						<h2 style="color:white;">"Everything is designed, but some things are designed well."</h2>
 					</div>
 				</div>
-				<div id ='section-events' class="section parallax dark m-0 border-0" style="padding: 150px 0;" data-bottom-top="background-position:0px -300px;" data-top-bottom="background-position:0px 0px;">
+				<div id ='section_events' class="section parallax dark m-0 border-0" style="padding: 150px 0;" data-bottom-top="background-position:0px -300px;" data-top-bottom="background-position:0px 0px;">
 					<script>
 						if (screen.width <500){
-							document.getElementById("section-events").style.background = "linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)), url('img/gallery/pic_065.jpg') no-repeat center top / 400%";
+							document.getElementById("section_events").style.background = "linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)), url('img/gallery/pic_065.jpg') no-repeat center top / 400%";
 						}else{
-							document.getElementById("section-events").style.background = "linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)), url('img/gallery/pic_065.jpg') no-repeat center top / 150%"
+							document.getElementById("section_events").style.background = "linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)), url('img/gallery/pic_065.jpg') no-repeat center top / 150%"
 						}
 					</script>
 					<div class="container text-center">
@@ -302,12 +299,11 @@
 						<br><br><br>
 						<a href="#" class="button button-rounded button-white button-light button-large">Register Now</a>
 					</div>
+					<div id='gallery_scroll'></div>
 				</div>
 			</div>
 		</section>
-		<!-- Content
-			============================================= -->
-		<section id="section-gallery"  style="background: #333333;">
+		<section id="section_gallery"  style="background: #333333;">
 			<div class="content-wrap py-0">
 				<div id="section-works" >
 					<div class="section m-0" style="background: #333333;">
@@ -465,7 +461,7 @@
 					</div>
 					<script>
 						if (screen.width <500){
-							document.getElementById("section-sponsor").style.background = "linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)), url('img/gallery/pic_032.jpg') no-repeat center top / 400%";
+							document.getElementById("section-sponsor").style.background = "linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)), url('img/gallery/pic_032.jpg') no-repeat center top / 580%";
 						}else{
 							document.getElementById("section-sponsor").style.background = "linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)), url('img/gallery/pic_032.jpg') no-repeat center top / 150%"
 						}
@@ -525,6 +521,7 @@
 									</div>
 								</div>
 								<div class="col-lg-4 col-md-6 col-padding">
+									
 									<div class="feature-box fbox-center fbox-dark fbox-plain">
 										<div class="fbox-icon">
 											<a href="#">Sponsor Logo</a>
@@ -534,11 +531,23 @@
 										</div>
 									</div>
 								</div>
+
 							</div>
 						</div>
 					</div>
+					<div id='contact_scroll'></div>
 				</div>
-				<div id="section-contact" class='mb-2 mt-2' style='background:#333333;'>
+				<div id="section_contact" class='mb-2 mt-2' style='background:#333333;'>
+					<div class="container clearfix">
+						<div class="mx-auto center" style="max-width: 900px;">
+							<div class="emphasis-title">
+								<h2 class="font-weight-light text-white mt-6">
+
+									Contact Us
+								</h2>
+							</div>
+						</div>
+					</div>
 					<div class="row align-items-stretch">
 						<div class="col-lg-8 col-md-6 d-none d-md-block px-0">
 							<div class="gmap h-100" data-address="Melbourne, Australia" data-maptype="ROADMAP" data-zoom="14" data-markers='[{ address: "Melbourne, Australia", html: "Melbourne, Australia", icon:{ image: "one-page/img/icons/map-icon-red.png", iconsize: [32, 32], iconanchor: [14,44] } }]' data-styles='[{"featureType":"all","elementType":"labels.text.fill","stylers":[{"saturation":36},{"color":"#000000"},{"lightness":40}]},{"featureType":"all","elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#000000"},{"lightness":16}]},{"featureType":"all","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#000000"},{"lightness":20}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#000000"},{"lightness":17},{"weight":1.2}]},{"featureType":"administrative","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"administrative.country","elementType":"all","stylers":[{"visibility":"simplified"}]},{"featureType":"administrative.country","elementType":"geometry","stylers":[{"visibility":"simplified"}]},{"featureType":"administrative.country","elementType":"labels.text","stylers":[{"visibility":"simplified"}]},{"featureType":"administrative.province","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"administrative.locality","elementType":"all","stylers":[{"visibility":"simplified"},{"saturation":"-100"},{"lightness":"30"}]},{"featureType":"administrative.neighborhood","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"administrative.land_parcel","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"landscape","elementType":"all","stylers":[{"visibility":"simplified"},{"gamma":"0.00"},{"lightness":"74"}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":20}]},{"featureType":"landscape.man_made","elementType":"all","stylers":[{"lightness":"3"}]},{"featureType":"poi","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":21}]},{"featureType":"road","elementType":"geometry","stylers":[{"visibility":"simplified"}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#000000"},{"lightness":17}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#000000"},{"lightness":29},{"weight":0.2}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":18}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":16}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":19}]},{"featureType":"water","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":17}]}]'></div>
@@ -658,5 +667,32 @@
 	<script src="js/plugins.min.js"></script>
 	<script src="https://maps.google.com/maps/api/js?key=YOUR-API-KEY"></script>
 	<script src="js/functions.js"></script>
+	<script type="text/javascript">
+		$("#home_btn").click(function() {
+			$([document.documentElement, document.body]).animate({
+		    	scrollTop: $("#section_home").offset().top
+			}, 700);
+		});
+		$("#intro_btn").click(function() {
+			$([document.documentElement, document.body]).animate({
+		    	scrollTop: $("#section_intro").offset().top
+			}, 700);
+		});
+		$("#event_btn").click(function() {
+			$([document.documentElement, document.body]).animate({
+		    	scrollTop: $("#section_events").offset().top
+			}, 700);
+		});
+		$("#gall_btn").click(function() {
+			$([document.documentElement, document.body]).animate({
+		    	scrollTop: $("#gallery_scroll").offset().top
+			}, 700);
+		});
+		$("#cont_btn").click(function() {
+			$([document.documentElement, document.body]).animate({
+		    	scrollTop: $("#contact_scroll").offset().top
+			}, 700);
+		});
+	</script>
 	</body>
 </html>

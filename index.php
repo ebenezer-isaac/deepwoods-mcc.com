@@ -11,9 +11,9 @@
 		<meta name="keywords" content="deepwoods, deep woods, deepwoods mcc, mcc cultural event, mcc event, mcc student union, mcc, deepwoods chennai">
 		<meta property="og:title" content="Deepwoods 2021 | MCC" />
 		<meta property="og:site_name" content="Click To Register Now">
-		<meta property="og:url" content="https://www.deepwoods.in" />
+		<meta property="og:url" content="https://www.ebenezer-isaac.com/demo/deepwoods.in" />
 		<meta property="og:description" content="Extravagant Cultural Show">
-		<meta property="og:image" content="https://www.deepwoods.in/img/logo.png">
+		<meta property="og:image" content="https://www.ebenezer-isaac.com/demo/deepwoods.in/img/logo.png">
 		<meta property="og:image:width" content="490" />
 		<meta property="og:image:height" content="490" />
 		<meta property="og:type" content="website" />
@@ -208,6 +208,16 @@
 					</script>
 					<div class="container text-center">
 						<div class='row'>
+							<?php
+								$servername = "sql290.main-hosting.eu";
+								$username = "u117204720_deepwoods";
+								$password = "Wj9|10g0oN";
+								$dbname = "u117204720_deepwoods";
+								$conn = new mysqli($servername, $username, $password, $dbname);
+								if ($conn->connect_error) {
+								  die("Connection failed: " . $conn->connect_error);
+								}
+							?>
 							<div class='col-md-4 col-sm-12'>
 								<div class="flip-card text-center">
 									<div class="flip-card-front dark" data-height-xl="505" style="background-image: url('img/gallery/pic_021.jpg'); height: 505px;">
@@ -226,11 +236,13 @@
 										<div class="flip-card-inner">
 											<p class="mb-2 text-white">
 											<div class='list-group'>
-												<div class="col">Cras justo odio</div>
-												<div class='col'>Dapibus ac facilisis in</div>
-												<div class='col'>Morbi leo risus</div>
-												<div class='col'>Porta ac consectetur ac</div>
-												<div class='col'>Vestibulum at eros</div>
+												<?php
+													$sql = "select name from events where `event_type_id`=1;";
+													$result = $conn->query($sql);
+													while($event = $result->fetch_assoc()) {	
+														echo "<div class='col'>".$event["name"]."</div>";
+													}
+												?>
 											</div>
 											</p>
 										</div>
@@ -255,11 +267,13 @@
 										<div class="flip-card-inner">
 											<p class="mb-2 text-white">
 											<ul class="list-group">
-												<div class='col'>Cras justo odio</div>
-												<div class='col'>Dapibus ac facilisis in</div>
-												<div class='col'>Morbi leo risus</div>
-												<div class='col'>Porta ac consectetur ac</div>
-												<div class='col'>Vestibulum at eros</div>
+												<?php
+													$sql = "select name from events where `event_type_id`=2;";
+													$result = $conn->query($sql);
+													while($event = $result->fetch_assoc()) {	
+														echo "<div class='col'>".$event["name"]."</div>";
+													}
+												?>
 											</ul>
 											</p>
 										</div>
@@ -284,17 +298,20 @@
 										<div class="flip-card-inner">
 											<p class="mb-2 text-white">
 											<ul class="list-group">
-												<div class='col'>Cras justo odio</div>
-												<div class='col'>Dapibus ac facilisis in</div>
-												<div class='col'>Morbi leo risus</div>
-												<div class='col'>Porta ac consectetur ac</div>
-												<div class='col'>Vestibulum at eros</div>
+												<?php
+													$sql = "select name from events where `event_type_id`=3;";
+													$result = $conn->query($sql);
+													while($event = $result->fetch_assoc()) {	
+														echo "<div class='col'>".$event["name"]."</div>";
+													}
+												?>
 											</ul>
 											</p>
 										</div>
 									</div>
 								</div>
 							</div>
+							<?php $conn->close(); ?>
 						</div>
 						<br><br><br>
 						<a href="#" class="button button-rounded button-white button-light button-large">Register Now</a>
@@ -461,7 +478,7 @@
 					</div>
 					<script>
 						if (screen.width <500){
-							document.getElementById("section-sponsor").style.background = "linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)), url('img/gallery/pic_032.jpg') no-repeat center top / 580%";
+							document.getElementById("section-sponsor").style.background = "linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)), url('img/gallery/pic_032.jpg') no-repeat center top / 650%";
 						}else{
 							document.getElementById("section-sponsor").style.background = "linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)), url('img/gallery/pic_032.jpg') no-repeat center top / 150%"
 						}

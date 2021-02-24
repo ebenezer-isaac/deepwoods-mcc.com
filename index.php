@@ -47,74 +47,10 @@
 	</head>
 	<body class="stretched side-push-panel" style="background:#000000;">
 		<div id="wrapper" class="clearfix">
-		<header id="header" 
-			class="full-header border-full-header transparent-header header-size-custom dark" data-sticky-shrink="true" style="background:#000000;">
-			<div id="header-wrap">
-				<div class="container">
-					<div class="header-row">
-						<div id="logo"  class="order-lg-2 col-auto px-0 col-lg-2 mr-lg-0">
-							<a href="index.html" class="standard-logo" style="margin-left:auto;margin-right:auto;" data-dark-logo="img/logo.png">
-							<img src="img/logo.png" alt="Canvas Logo" class='mt-2 mb-2 mr-2'>
-							<img src="img/deepwoods.png" alt="Canvas Logo" class='mt-2 mb-2'>
-							</a>
-							<a href="index.html" class="retina-logo" style="margin-left:auto;margin-right:auto;" data-dark-logo="img/logo.png">
-							<img src="img/logo.png" alt="Canvas Logo" class='mt-2 mb-2 mr-2'>
-							<img src="img/deepwoods.png" alt="Canvas Logo" class='mt-2 mb-2'>
-							</a>
-						</div>
-						<div id="primary-menu-trigger">
-							<svg class="svg-trigger" viewBox="0 0 100 100">
-								<path d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20"></path>
-								<path d="m 30,50 h 40"></path>
-								<path d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20"></path>
-							</svg>
-						</div>
-						<!-- Primary Navigation
-							============================================= -->
-						<nav class="primary-menu order-lg-1 col-lg-5 px-0" style="position:inherit;">
-							<ul class="menu-container" data-easing="easeInOutExpo" data-speed="1250" data-offset="35">
-								<li class="menu-item">
-									<a href="#" id='home_btn' class="menu-link">
-										<div>Home</div>
-									</a>
-								</li>
-								<li class="menu-item">
-									<a href="#" id='intro_btn' class="menu-link">
-										<div>Introduction</div>
-									</a>
-								</li>
-								<li class="menu-item">
-									<a href="#" class="menu-link">
-										<div>About</div>
-									</a>
-								</li>
-							</ul>
-						</nav>
-						<nav class="primary-menu order-lg-3 col-lg-5 px-0" style="position:inherit;">
-							<div class="menu-container justify-content-lg-end">
-								<li class="menu-item">
-									<a href="#" id='event_btn' class="menu-link">
-										<div>Events</div>
-									</a>
-								</li>
-								<li class="menu-item">
-									<a href="#" id='gall_btn' class="menu-link">
-										<div>Gallery</div>
-									</a>
-								</li>
-								<li class="menu-item">
-									<a href="#" id='cont_btn' class="menu-link">
-										<div>Contact</div>
-									</a>
-								</li>
-							</div>
-						</nav>
-						<!-- #primary-menu end -->
-					</div>
-				</div>
-			</div>
-			<div class="header-wrap-clone"></div>
-		</header>
+		<?php 
+			$page = "Home";
+			include "header.php" 
+		?>
 		<section id="section_home" class="slider-element slider-parallax min-vh-100 include-header dark">
 			<script>
 				if (screen.width <500){
@@ -219,7 +155,7 @@
 								}
 							?>
 							<div class='col-md-4 col-sm-12'>
-								<div class="flip-card text-center">
+								<div class="flip-card text-center" id='flip1'>
 									<div class="flip-card-front dark" data-height-xl="505" style="background-image: url('img/gallery/pic_021.jpg'); height: 505px;">
 										<div class="flip-card-inner">
 											<div class="card bg-transparent border-0 text-center">
@@ -248,9 +184,10 @@
 										</div>
 									</div>
 								</div>
+								<br>
 							</div>
 							<div class='col-md-4 col-sm-12'>
-								<div class="flip-card text-center">
+								<div class="flip-card text-center" id='flip2'>
 									<div class="flip-card-front dark" data-height-xl="505" style="background-image: url('img/gallery/pic_046.jpg'); height: 505px;">
 										<div class="flip-card-inner">
 											<div class="card bg-transparent border-0 text-center">
@@ -279,9 +216,10 @@
 										</div>
 									</div>
 								</div>
+								<br>
 							</div>
 							<div class='col-md-4 col-sm-12'>
-								<div class="flip-card text-center">
+								<div class="flip-card text-center" id='flip3'>
 									<div class="flip-card-front dark" data-height-xl="505" style="background-image: url('img/gallery/pic_010.jpg'); height: 505px;">
 										<div class="flip-card-inner">
 											<div class="card bg-transparent border-0 text-center">
@@ -310,9 +248,17 @@
 										</div>
 									</div>
 								</div>
+								<br>
 							</div>
 							<?php $conn->close(); ?>
 						</div>
+						<script>
+							if (screen.width <500){
+								document.getElementById("flag1").classList.add("m-1");
+								document.getElementById("flag2").classList.add("m-1");
+								document.getElementById("flag3").classList.add("m-1");
+							}
+						</script>
 						<br><br><br>
 						<a href="#" class="button button-rounded button-white button-light button-large">Register Now</a>
 					</div>
@@ -461,7 +407,7 @@
 						</article>
 					</div>
 					<div class="topmargin center">
-						<a href="#" class="button button-border button-circle font-weight-semibold" style='color:white!important'>
+						<a href="gallery.php" class="button button-border button-circle font-weight-semibold" style='color:white!important'>
 						View More
 						</a>
 					</div>
@@ -478,7 +424,7 @@
 					</div>
 					<script>
 						if (screen.width <500){
-							document.getElementById("section-sponsor").style.background = "linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)), url('img/gallery/pic_032.jpg') no-repeat center top / 650%";
+							document.getElementById("section-sponsor").style.background = "linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)), url('img/gallery/pic_032.jpg') no-repeat center top / 700%";
 						}else{
 							document.getElementById("section-sponsor").style.background = "linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)), url('img/gallery/pic_032.jpg') no-repeat center top / 150%"
 						}
@@ -618,129 +564,13 @@
 				</div>
 			</div>
 		</section>
-		<footer id="footer" style="background-color: #333333;">
-			<div id="copyrights" style='background-color: black;color:white;'>
-				<div class="container" >
-					<div class="row justify-content-between">
-						<div class="col-md-6 col-sm-12 text-center text-lg-left order-last order-lg-first">
-							<div id="logo"  class="col-lg-6 standard-logo" >
-								<img src="img/logo.png" alt="Canvas Logo" style='max-height: 75px;' class='mt-2 mb-2 mr-2'>
-								<img src="img/deepwoods.png" alt="Canvas Logo"  style='max-height: 75px;' class='mt-2 mb-2'>
-							</div>
-							<br>
-						</div>
-						<div class="col-md-6 col-sm-12 col-lg-auto text-center text-lg-right dark">
-							<div class="copyrights-menu copyright-links">
-								<a id='home_btn_1' href="#">Home</a>/
-								<a id='intro_btn_1' href="#">Introduction</a>/
-								<a href="about.php">About</a>/
-								<a id='event_btn_1' href="#">Events</a>/
-								<a id='gall_btn_1' href="#">Gallery</a>/
-								<a id='cont_btn_1' href="#">Contact</a>
-							</div>
-							<a href="#" class="social-icon inline-block si-small si-borderless mb-0 si-facebook">
-								<i class="icon-facebook"></i>
-								<i class="icon-facebook"></i>
-							</a>
-							<a href="#" class="social-icon inline-block si-small si-borderless mb-0 si-twitter">
-								<i class="icon-twitter"></i>
-								<i class="icon-twitter"></i>
-							</a>
-							<a href="#" class="social-icon inline-block si-small si-borderless mb-0 si-gplus">
-								<i class="icon-gplus"></i>
-								<i class="icon-gplus"></i>
-							</a>
-							<a href="#" class="social-icon inline-block si-small si-borderless mb-0 si-pinterest">
-								<i class="icon-pinterest"></i>
-								<i class="icon-pinterest"></i>
-							</a>
-							<a href="#" class="social-icon inline-block si-small si-borderless mb-0 si-vimeo">
-								<i class="icon-vimeo"></i>
-								<i class="icon-vimeo"></i>
-							</a>
-							<a href="#" class="social-icon inline-block si-small si-borderless mb-0 si-github">
-								<i class="icon-github"></i>
-								<i class="icon-github"></i>
-							</a>
-							<a href="#" class="social-icon inline-block si-small si-borderless mb-0 si-yahoo">
-								<i class="icon-yahoo"></i>
-								<i class="icon-yahoo"></i>
-							</a>
-							<a href="#" class="social-icon inline-block si-small si-borderless mb-0 si-linkedin">
-								<i class="icon-linkedin"></i>
-								<i class="icon-linkedin"></i>
-							</a>
-						</div>
-					</div>
-					<div class='row'>
-						<div class="col-md-6 col-sm-12">
-							Copyrights &copy; 2021 All Rights Reserved by Madras Christian College.
-						</div>
-						<div class="col-md-6 col-sm-12 text-lg-right">
-							Website Developed and Maintained by <a href='https://ebenezer-isaac.github.io/'>Ebenezer Isaac</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</footer>
+		<?php 
+			include "footer.php" 
+		?>
 	</div>
 	<div id="gotoTop" class="icon-angle-up"></div>
-	<script src="js/jquery.js"></script>
 	<script src="js/plugins.min.js"></script>
 	<script src="https://maps.google.com/maps/api/js?key=YOUR-API-KEY"></script>
 	<script src="js/functions.js"></script>
-	<script type="text/javascript">
-		$("#home_btn").click(function() {
-			$([document.documentElement, document.body]).animate({
-		    	scrollTop: $("#section_home").offset().top
-			}, 700);
-		});
-		$("#intro_btn").click(function() {
-			$([document.documentElement, document.body]).animate({
-		    	scrollTop: $("#section_intro").offset().top
-			}, 700);
-		});
-		$("#event_btn").click(function() {
-			$([document.documentElement, document.body]).animate({
-		    	scrollTop: $("#section_events").offset().top
-			}, 700);
-		});
-		$("#gall_btn").click(function() {
-			$([document.documentElement, document.body]).animate({
-		    	scrollTop: $("#gallery_scroll").offset().top
-			}, 700);
-		});
-		$("#cont_btn").click(function() {
-			$([document.documentElement, document.body]).animate({
-		    	scrollTop: $("#contact_scroll").offset().top
-			}, 700);
-		});
-
-		$("#home_btn_1").click(function() {
-			$([document.documentElement, document.body]).animate({
-		    	scrollTop: $("#section_home").offset().top
-			}, 700);
-		});
-		$("#intro_btn_1").click(function() {
-			$([document.documentElement, document.body]).animate({
-		    	scrollTop: $("#section_intro").offset().top
-			}, 700);
-		});
-		$("#event_btn_1").click(function() {
-			$([document.documentElement, document.body]).animate({
-		    	scrollTop: $("#section_events").offset().top
-			}, 700);
-		});
-		$("#gall_btn_1").click(function() {
-			$([document.documentElement, document.body]).animate({
-		    	scrollTop: $("#gallery_scroll").offset().top
-			}, 700);
-		});
-		$("#cont_btn_1").click(function() {
-			$([document.documentElement, document.body]).animate({
-		    	scrollTop: $("#contact_scroll").offset().top
-			}, 700);
-		});
-	</script>
 	</body>
 </html>

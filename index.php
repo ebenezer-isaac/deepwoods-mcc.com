@@ -9,13 +9,13 @@
 		<link rel="icon" type="image/png" href="img/logo.png"/>
 		<meta name="theme-color" content="#000000">
 		<meta name="keywords" content="deepwoods, deep woods, deepwoods mcc, mcc cultural event, mcc event, mcc student union, mcc, deepwoods chennai">
-		<meta property="og:title" content="Deepwoods 2021 | Madras Christian College" />
+		<meta property="og:title" content="Deepwoods 2021 | MCC" />
 		<meta property="og:site_name" content="Click To Register Now">
 		<meta property="og:url" content="https://www.deepwoods.in" />
 		<meta property="og:description" content="Extravagant Cultural Show">
 		<meta property="og:image" content="https://www.deepwoods.in/img/logo.png">
-		<meta property="og:image:width" content="600" />
-		<meta property="og:image:height" content="600" />
+		<meta property="og:image:width" content="490" />
+		<meta property="og:image:height" content="490" />
 		<meta property="og:type" content="website" />
 		<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700|Roboto:300,400,500,700|IBM+Plex+Serif:300,400,500,600&display=swap" rel="stylesheet" type="text/css" />
 		<link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
@@ -85,7 +85,7 @@
 								</li>
 								<li class="menu-item">
 									<a href="#" class="menu-link">
-										<div>Register</div>
+										<div>About</div>
 									</a>
 								</li>
 							</ul>
@@ -614,7 +614,12 @@
 						</div>
 						<div class="col-md-6 col-sm-12 col-lg-auto text-center text-lg-right dark">
 							<div class="copyrights-menu copyright-links">
-								<a href="#">Home</a>/<a href="#">About</a>/<a href="#">Features</a>/<a href="#">Portfolio</a>/<a href="#">FAQs</a>/<a href="#">Contact</a>
+								<a id='home_btn_1' href="#">Home</a>/
+								<a id='intro_btn_1' href="#">Introduction</a>/
+								<a href="about.php">About</a>/
+								<a id='event_btn_1' href="#">Events</a>/
+								<a id='gall_btn_1' href="#">Gallery</a>/
+								<a id='cont_btn_1' href="#">Contact</a>
 							</div>
 							<a href="#" class="social-icon inline-block si-small si-borderless mb-0 si-facebook">
 								<i class="icon-facebook"></i>
@@ -689,6 +694,32 @@
 			}, 700);
 		});
 		$("#cont_btn").click(function() {
+			$([document.documentElement, document.body]).animate({
+		    	scrollTop: $("#contact_scroll").offset().top
+			}, 700);
+		});
+
+		$("#home_btn_1").click(function() {
+			$([document.documentElement, document.body]).animate({
+		    	scrollTop: $("#section_home").offset().top
+			}, 700);
+		});
+		$("#intro_btn_1").click(function() {
+			$([document.documentElement, document.body]).animate({
+		    	scrollTop: $("#section_intro").offset().top
+			}, 700);
+		});
+		$("#event_btn_1").click(function() {
+			$([document.documentElement, document.body]).animate({
+		    	scrollTop: $("#section_events").offset().top
+			}, 700);
+		});
+		$("#gall_btn_1").click(function() {
+			$([document.documentElement, document.body]).animate({
+		    	scrollTop: $("#gallery_scroll").offset().top
+			}, 700);
+		});
+		$("#cont_btn_1").click(function() {
 			$([document.documentElement, document.body]).animate({
 		    	scrollTop: $("#contact_scroll").offset().top
 			}, 700);

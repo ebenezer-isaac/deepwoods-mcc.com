@@ -208,7 +208,7 @@
 													$sql = "select event_id, name from events where `event_type_id`=2;";
 													$result = $conn->query($sql);
 													while($event = $result->fetch_assoc()) {	
-														echo "<a href='registration.php?event_type_id=1&event_id=".$event["event_id"]."' class='col'>".$event["name"]."</a>";
+														echo "<a href='registration.php?event_type_id=2&event_id=".$event["event_id"]."' class='col'>".$event["name"]."</a>";
 													}
 												?>
 											</ul>
@@ -240,7 +240,7 @@
 													$sql = "select event_id, name from events where `event_type_id`=3;";
 													$result = $conn->query($sql);
 													while($event = $result->fetch_assoc()) {	
-														echo "<a href='registration.php?event_type_id=1&event_id=".$event["event_id"]."' class='col'>".$event["name"]."</a>";
+														echo "<a href='registration.php?event_type_id=3&event_id=".$event["event_id"]."' class='col'>".$event["name"]."</a>";
 													}
 												?>
 											</ul>

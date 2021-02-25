@@ -43,25 +43,47 @@
 					transform: translate3d(0, 70px, 0);
 				}
 			}
+			@media screen and (min-width: 601px) {
+				.event_list_item {
+					font-size: 25px;
+					list-style-position: inside;
+				}
+			}
+			@media screen and (max-width: 600px) {
+				.event_list_item {
+					font-size: 25px;
+					list-style-position: inside;
+				}
+			}
 		</style>
 	</head>
-	<body class="stretched side-push-panel" style="background:#000000;">
+	<script>
+		function reAdjust(){
+			//console.log("hey "+document.body.clientWidth+" : "+document.body.offsetWidth);
+			if(document.body.clientWidth <975){
+				document.getElementById("extra_image").style.display="none";
+			}else if (document.body.clientWidth <800){
+				document.getElementById("extra_image").style.display="block";
+				document.getElementById("icon_pride1").classList.remove("mt-6");
+				document.getElementById("icon_pride2").classList.remove("mt-6");
+				document.getElementById("icon_pride1").classList.remove("i-xlarge");
+				document.getElementById("icon_pride2").classList.remove("i-xlarge");
+				document.getElementById("flip1").classList.add("m-1");
+				document.getElementById("flip2").classList.add("m-1");
+				document.getElementById("flip3").classList.add("m-1");
+			}
+		}
+	</script>
+	<body class="stretched side-push-panel" onresize="reAdjust()" style="background:#000000;">
 		<div id="wrapper" class="clearfix">
 		<?php 
 			$page = "Home";
 			include "header.php" 
 		?>
-		<section id="section_home" class="slider-element slider-parallax min-vh-100 include-header dark">
-			<script>
-				if (screen.width <500){
-					document.getElementById("section_home").style.background = "linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)), url('img/gallery/pic_042.jpg') no-repeat center top / 400%";
-				}else{
-					document.getElementById("section_home").style.background = "linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)), url('img/gallery/pic_042.jpg') no-repeat center top / 100%"
-				}
-			</script>
-			<div class="slider-inner dark">
-				<div class="container py-5 dark">
-					<div class="row align-items-center mt-4 h-100">
+		<section id="section_home" class="slider-element slider-parallax min-vh-100 dark" style = "background: linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)), url('img/gallery/pic_042.jpg') no-repeat center bottom / auto 150%">
+			<div class="mt-6 dark">
+				<div class="container dark">
+					<div class="row align-items-center mt-4">
 						<div class="col-md-6 order-2 order-md-1 my-5 my-md-0 text-center text-md-left">
 							<div class="heading-block border-bottom-0 bottommargin-sm">
 								<h5 class="text-uppercase ls4 text-white-50 font-weight-light mb-2" data-animate="fadeInUp" data-delay="100">MCC presents</h5>
@@ -92,7 +114,7 @@
 						</div>
 					</div>
 			<div class="content-wrap py-0">
-				<div id="section_intro" class="section parallax min-vh-100 m-0 border-0 d-flex" >
+				<div id="section_intro" class="section parallax min-vh-100 m-0 border-0 d-flex" style = "background: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)), url('img/gallery/pic_028.jpg') no-repeat left bottom / auto 120%" >
 					<div class="vertical-middle">
 						<div class="container">
 							<div class="row" >
@@ -115,17 +137,6 @@
 								</div>
 							</div>
 						</div>
-						<script>
-							if (screen.width <500){
-								document.getElementById("section_intro").style.background = "linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)), url('img/gallery/pic_028.jpg') no-repeat center top / 450%";
-								document.getElementById("icon_pride1").classList.remove("mt-6");
-								document.getElementById("icon_pride2").classList.remove("mt-6");
-								document.getElementById("icon_pride1").classList.remove("i-xlarge");
-								document.getElementById("icon_pride2").classList.remove("i-xlarge");
-							}else{
-								document.getElementById("section_intro").style.background = "linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)), url('img/gallery/pic_028.jpg') no-repeat right top / 120%"
-							}
-						</script>
 					</div>
 				</div>
 				<div class="clear"></div>
@@ -134,14 +145,8 @@
 						<h2 style="color:white;">"Everything is designed, but some things are designed well."</h2>
 					</div>
 				</div>
-				<div id ='section_events' class="section parallax dark m-0 border-0" style="padding: 150px 0;" data-bottom-top="background-position:0px -300px;" data-top-bottom="background-position:0px 0px;">
-					<script>
-						if (screen.width <500){
-							document.getElementById("section_events").style.background = "linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)), url('img/gallery/pic_065.jpg') no-repeat center top / 400%";
-						}else{
-							document.getElementById("section_events").style.background = "linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)), url('img/gallery/pic_065.jpg') no-repeat center top / 150%"
-						}
-					</script>
+				<div id ='section_events' class="section parallax dark m-0 border-0" style = "background: linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)), url('img/gallery/pic_065.jpg') no-repeat center top / auto 150%;padding: 150px 0;" data-bottom-top="background-position:0px -300px;" data-top-bottom="background-position:0px 0px;">
+					
 					<div class="container text-center">
 						<div class='row'>
 							<?php
@@ -171,15 +176,15 @@
 									<div class="flip-card-back" data-height-xl="505" style="background-color: #EF7200; height: 505px;">
 										<div class="flip-card-inner">
 											<p class="mb-2 text-white">
-											<div class='list-group'>
+											<ol class='list-group' id='event_list_1'>
 												<?php
 													$sql = "select event_id, name from events where `event_type_id`=1;";
 													$result = $conn->query($sql);
 													while($event = $result->fetch_assoc()) {	
-														echo "<a href='registration.php?event_type_id=1&event_id=".$event["event_id"]."' class='col'>".$event["name"]."</a>";
+														echo "<li class='event_list_item' id='event_link_".$event["event_id"]."' value='".$event["event_id"]."' href='registration.php?event_type_id=1&event_id=".$event["event_id"]."' class='col'>".$event["name"]."</li>";
 													}
 												?>
-											</div>
+											</ol>
 											</p>
 										</div>
 									</div>
@@ -203,15 +208,15 @@
 									<div class="flip-card-back" data-height-xl="505" style="background-color:#03A2D0 ; height: 505px;">
 										<div class="flip-card-inner">
 											<p class="mb-2 text-white">
-											<ul class="list-group">
+											<ol class='list-group' id='event_list_2'>
 												<?php
 													$sql = "select event_id, name from events where `event_type_id`=2;";
 													$result = $conn->query($sql);
 													while($event = $result->fetch_assoc()) {	
-														echo "<a href='registration.php?event_type_id=2&event_id=".$event["event_id"]."' class='col'>".$event["name"]."</a>";
+														echo "<li class='event_list_item' id='event_link_".$event["event_id"]."' value='".$event["event_id"]."' href='registration.php?event_type_id=2&event_id=".$event["event_id"]."' class='col'>".$event["name"]."</li>";
 													}
 												?>
-											</ul>
+											</ol>
 											</p>
 										</div>
 									</div>
@@ -235,15 +240,15 @@
 									<div class="flip-card-back" data-height-xl="505" style="background-color: #4D8D2E; height: 505px;">
 										<div class="flip-card-inner">
 											<p class="mb-2 text-white">
-											<ul class="list-group">
+											<ol class='list-group' id='event_list_3'>
 												<?php
 													$sql = "select event_id, name from events where `event_type_id`=3;";
 													$result = $conn->query($sql);
 													while($event = $result->fetch_assoc()) {	
-														echo "<a href='registration.php?event_type_id=3&event_id=".$event["event_id"]."' class='col'>".$event["name"]."</a>";
+														echo "<li class='event_list_item' id='event_link_".$event["event_id"]."' value='".$event["event_id"]."' href='registration.php?event_type_id=3&event_id=".$event["event_id"]."' class='col'>".$event["name"]."</li>";
 													}
 												?>
-											</ul>
+											</ol>
 											</p>
 										</div>
 									</div>
@@ -252,13 +257,7 @@
 							</div>
 							<?php $conn->close(); ?>
 						</div>
-						<script>
-							if (screen.width <500){
-								document.getElementById("flag1").classList.add("m-1");
-								document.getElementById("flag2").classList.add("m-1");
-								document.getElementById("flag3").classList.add("m-1");
-							}
-						</script>
+						
 						<br><br><br>
 						<a href="registration.php" class="button button-rounded button-white button-light button-large">Register Now</a>
 					</div>
@@ -387,7 +386,7 @@
 								</div>
 							</div>
 						</article>
-						<article class="portfolio-item col-lg-3 col-md-4 col-sm-6 col-12">
+						<article id="extra_image" class="portfolio-item col-lg-3 col-md-4 col-sm-6 col-12">
 							<div class="grid-inner">
 								<div class="portfolio-image">
 									<a href="#">
@@ -412,7 +411,7 @@
 						</a>
 					</div>
 				</div>
-				<div id="section-sponsor">
+				<div id="section-sponsor" >
 					<div class="container clearfix">
 						<div class="mx-auto center" style="max-width: 900px;">
 							<div class="emphasis-title">
@@ -422,110 +421,67 @@
 							</div>
 						</div>
 					</div>
-					<script>
-						if (screen.width <500){
-							document.getElementById("section-sponsor").style.background = "linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)), url('img/gallery/pic_032.jpg') no-repeat center top / 700%";
-						}else{
-							document.getElementById("section-sponsor").style.background = "linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)), url('img/gallery/pic_032.jpg') no-repeat center top / 150%"
-						}
-					</script>
+					
 					<div class="row align-items-stretch">
 						<div class="d-none d-md-block" style="color:white!important;"></div>
 						<div class="col-12">
-							<div class="row align-items-stretch grid-border clearfix">
+							<div class="row align-items-stretch clearfix">
 								<div class='col-md-1'></div>
-								<div class="col-sm-6 col-md-2 col-padding">
-									<div class="feature-box fbox-center fbox-dark fbox-plain">
-										
-
-											<a href="#">
-												<img src="img/sponsors/7up.png" style="height:200px;object-fit: contain;">
-											</a>
-										
-									</div>
+								<div class="col-sm-6 col-md-2">
+									<a href="#">
+										<img src="img/sponsors/7up.png" style="width:100%;object-fit: contain;">
+									</a>
 								</div>
-								<div class="col-sm-6 col-md-2 col-padding">
-									<div class="feature-box fbox-center fbox-dark fbox-plain">
-											<a href="#">
-												<img src="img/sponsors/airtel.png" style="height:200px;object-fit: contain;">
-											</a>
-									</div>
+								<div class="col-sm-6 col-md-2">
+									<a href="#">
+										<img src="img/sponsors/airtel.png" style="width:100%;object-fit: contain;">
+									</a>
 								</div>
-								<div class="col-sm-6 col-md-2 col-padding">
-									<div class="feature-box fbox-center fbox-dark fbox-plain">
-										
-											<a href="#">
-												<img src="img/sponsors/bajaj.png" style="height:200px;object-fit: contain;">
-											</a>
-									</div>
+								<div class="col-sm-6 col-md-2">
+									<a href="#">
+										<img src="img/sponsors/bajaj.png" style="width:100%;object-fit: contain;">
+									</a>
 								</div>
-								<div class="col-sm-6 col-md-2 col-padding">
-									<div class="feature-box fbox-center fbox-dark fbox-plain">
-										
-											<a href="#">
-												<img src="img/sponsors/mahindra.png" style="height:200px;object-fit: contain;">
-											</a>
-										
-									</div>
+								<div class="col-sm-6 col-md-2">
+									<a href="#">
+										<img src="img/sponsors/mahindra.png" style="width:100%;object-fit: contain;">
+									</a>
 								</div>
-								<div class="col-sm-6 col-md-2 col-padding">
-									<div class="feature-box fbox-center fbox-dark fbox-plain">
-										
-											<a href="#">
-												<img src="img/sponsors/mrf.png" style="height:200px;object-fit: contain;">
-											</a>
-										
-									</div>
+								<div class="col-sm-6 col-md-2">
+									<a href="#">
+										<img src="img/sponsors/mrf.png" style="width:100%;object-fit: contain;">
+									</a>
 								</div>
 								<div class='col-md-1'></div>
 								<div class='col-md-1'></div>
-								<div class="col-sm-6 col-md-2 col-padding">
-									<div class="feature-box fbox-center fbox-dark fbox-plain">
-										
-											<a href="#">
-												<img src="img/sponsors/pepsi.png" style="height:200px;object-fit: contain;">
-											</a>
-										
-									</div>
+								<div class="col-sm-6 col-md-2">
+									<a href="#">
+										<img src="img/sponsors/pepsi.png" style="width:100%;object-fit: contain;">
+									</a>
 								</div>
-								<div class="col-sm-6 col-md-2 col-padding">
-									<div class="feature-box fbox-center fbox-dark fbox-plain">
-										
-											<a href="#">
-												<img src="img/sponsors/poorvika.png" style="height:200px;object-fit: contain;">
-											</a>
-										
-									</div>
+								<div class="col-sm-6 col-md-2">
+									<a href="#">
+										<img src="img/sponsors/poorvika.png" style="width:100%;object-fit: contain;">
+									</a>
 								</div>
-								<div class="col-sm-6 col-md-2 col-padding">
-									<div class="feature-box fbox-center fbox-dark fbox-plain">
-										
-											<a href="#">
-												<img src="img/sponsors/sangeetha.png" style="height:200px;object-fit: contain;">
-											</a>
-										
-									</div>
+								<div class="col-sm-6 col-md-2">
+									<a href="#">
+										<img src="img/sponsors/sangeetha.png" style="width:100%;object-fit: contain;">
+									</a>
 								</div>
-								<div class="col-sm-6 col-md-2 col-padding">
-									<div class="feature-box fbox-center fbox-dark fbox-plain">
-										
-											<a href="#">
-												<img src="img/sponsors/suzuki.png" style="height:200px;object-fit: contain;">
-											</a>
-										
-									</div>
+								<div class="col-sm-6 col-md-2">
+									<a href="#">
+										<img src="img/sponsors/suzuki.png" style="width:100%;object-fit: contain;">
+									</a>
 								</div>
-								<div class="col-sm-6 col-md-2 col-padding">
-									<div class="feature-box fbox-center fbox-dark fbox-plain">
-										
-											<a href="#">
-												<img src="img/sponsors/zebronics.png" style="height:200px;object-fit: contain;">
-											</a>
-										
-									</div>
+								<div class="col-sm-6 col-md-2">
+									<a href="#">
+										<img src="img/sponsors/zebronics.png" style="width:100%;object-fit: contain;">
+									</a>
 								</div>
 								<div class='col-md-1'></div>
 							</div>
+							<br><br><br>
 						</div>
 					</div>
 					<div id='contact_scroll'></div>
@@ -602,5 +558,10 @@
 	<script src="js/plugins.min.js"></script>
 	<script src="https://maps.google.com/maps/api/js?key=YOUR-API-KEY"></script>
 	<script src="js/functions.js"></script>
+	<script>
+		$(document).ready(function(){
+			reAdjust();	
+		});
+	</script>
 	</body>
 </html>

@@ -5,12 +5,12 @@
 			<div class="header-row">
 				<div id="logo"  class="order-lg-2 col-auto px-0 col-lg-2 mr-lg-0">
 					<a href="index.html" class="standard-logo" style="margin-left:auto;margin-right:auto;" data-dark-logo="img/logo.png">
-					<img src="img/logo.png" alt="Canvas Logo" class='mt-2 mb-2 mr-2'>
-					<img src="img/deepwoods.png" alt="Canvas Logo" class='mt-2 mb-2'>
+					<img src="img/logo.png" alt="Canvas Logo" class='mt-2 mb-2 mr-2' style="max-width: 100px;object-fit: contain;">
+					<img src="img/deepwoods.png" alt="Canvas Logo" class='mt-2 mb-2' style="max-width: 180px;object-fit: contain;">
 					</a>
 					<a href="index.html" class="retina-logo" style="margin-left:auto;margin-right:auto;" data-dark-logo="img/logo.png">
-					<img src="img/logo.png" alt="Canvas Logo" class='mt-2 mb-2 mr-2'>
-					<img src="img/deepwoods.png" alt="Canvas Logo" class='mt-2 mb-2'>
+					<img src="img/logo.png" alt="Canvas Logo" class='mt-2 mb-2 mr-2' style="max-width: 100px;object-fit: contain;">
+					<img src="img/deepwoods.png" alt="Canvas Logo" class='mt-2 mb-2' style="max-width: 160px;object-fit: contain;">
 					</a>
 				</div>
 				<div id="primary-menu-trigger">

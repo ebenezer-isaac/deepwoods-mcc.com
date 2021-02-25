@@ -43,15 +43,15 @@
 					transform: translate3d(0, 70px, 0);
 				}
 			}
-			@media screen and (min-width: 601px) {
+			@media screen and (min-width: 1001px) {
 				.event_list_item {
-					font-size: 25px;
+					font-size: 20px;
 					list-style-position: inside;
 				}
 			}
-			@media screen and (max-width: 600px) {
+			@media screen and (max-width: 1000px) {
 				.event_list_item {
-					font-size: 25px;
+					font-size: 19px;
 					list-style-position: inside;
 				}
 			}

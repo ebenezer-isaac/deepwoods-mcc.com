@@ -11,42 +11,72 @@
 				</div>
 				<div class="col-md-6 col-sm-12 col-lg-auto text-center text-lg-right dark">
 					<div class="copyrights-menu copyright-links">
-						<a id='home_btn_1' href="#">Home</a>/
-						<a id='intro_btn_1' href="#">Introduction</a>/
+						<?php
+							if ($page=="Home") {
+								echo "<a href='#' id='home_btn_1'>Home</a>/";
+							}else{
+								echo "<a href='index.php' id='home_btn_1'>Home</a>/";
+							}
+						?>
+						<?php 
+							if ($page=="Home") {
+						?>
+							<a id='intro_btn_1' href="#">Introduction</a>/
+						<?php
+							}
+						?>
 						<a href="about.php">About</a>/
-						<a id='event_btn_1' href="#">Events</a>/
-						<a id='gall_btn_1' href="#">Gallery</a>/
+						<?php
+							if ($page=="Home") {
+								echo "<a href='#' id='event_btn_1'>Events</a>/";
+							}else{
+								echo "<a href='registration.php' id='event_btn_1'>Register</a>/";
+							}
+						?>
+						<?php
+							if ($page=="Home") {
+								echo "<a href='#' id='gall_btn_1'>Gallery</a>/";
+							}else{
+								echo "<a href='gallery.php' id='gall_btn_1'>Gallery</a>";
+							}
+						?>
+						<?php 
+							if ($page=="Home") {
+						?>
 						<a id='cont_btn_1' href="#">Contact</a>
+						<?php
+							}
+						?>
 					</div>
-					<a href="#" class="social-icon inline-block si-small si-borderless mb-0 si-facebook">
+					<a href="https://www.facebook.com/deepwoodsmcc/" target="_blank" class="social-icon inline-block si-small si-borderless mb-0 si-facebook">
 						<i class="icon-facebook"></i>
 						<i class="icon-facebook"></i>
 					</a>
-					<a href="#" class="social-icon inline-block si-small si-borderless mb-0 si-twitter">
+					<a href="https://instagram.com/deepwoodsmcc/" target="_blank" class="social-icon inline-block si-small si-borderless mb-0 si-instagram">
+						<i class="icon-instagram"></i>
+						<i class="icon-instagram"></i>
+					</a>
+					<a href="#" target="_blank" class="social-icon inline-block si-small si-borderless mb-0 si-twitter">
 						<i class="icon-twitter"></i>
 						<i class="icon-twitter"></i>
 					</a>
-					<a href="#" class="social-icon inline-block si-small si-borderless mb-0 si-gplus">
+					<a href="#" target="_blank" class="social-icon inline-block si-small si-borderless mb-0 si-gplus">
 						<i class="icon-gplus"></i>
 						<i class="icon-gplus"></i>
 					</a>
-					<a href="#" class="social-icon inline-block si-small si-borderless mb-0 si-pinterest">
+					<a href="#" target="_blank" class="social-icon inline-block si-small si-borderless mb-0 si-pinterest">
 						<i class="icon-pinterest"></i>
 						<i class="icon-pinterest"></i>
 					</a>
-					<a href="#" class="social-icon inline-block si-small si-borderless mb-0 si-vimeo">
+					<a href="#" target="_blank" class="social-icon inline-block si-small si-borderless mb-0 si-vimeo">
 						<i class="icon-vimeo"></i>
 						<i class="icon-vimeo"></i>
 					</a>
-					<a href="#" class="social-icon inline-block si-small si-borderless mb-0 si-github">
-						<i class="icon-github"></i>
-						<i class="icon-github"></i>
-					</a>
-					<a href="#" class="social-icon inline-block si-small si-borderless mb-0 si-yahoo">
+					<a href="#" target="_blank" class="social-icon inline-block si-small si-borderless mb-0 si-yahoo">
 						<i class="icon-yahoo"></i>
 						<i class="icon-yahoo"></i>
 					</a>
-					<a href="#" class="social-icon inline-block si-small si-borderless mb-0 si-linkedin">
+					<a href="#" target="_blank" class="social-icon inline-block si-small si-borderless mb-0 si-linkedin">
 						<i class="icon-linkedin"></i>
 						<i class="icon-linkedin"></i>
 					</a>
@@ -63,6 +93,9 @@
 		</div>
 	</div>
 	<script src="js/jquery.js"></script>
+	<?php 
+		if ($page=="Home") {
+	?>
 	<script type="text/javascript">
 		$("#home_btn").click(function() {
 			$([document.documentElement, document.body]).animate({
@@ -116,4 +149,8 @@
 			}, 700);
 		});
 	</script>
+	<?php
+		}
+	?>
+	
 </footer>

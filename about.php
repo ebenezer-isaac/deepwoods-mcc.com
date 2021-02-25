@@ -132,27 +132,72 @@
 									<div class="col-sm-12 col-md-2 text-center" data-animate="bounceIn" data-delay="500">
 										<h3 style="color:white!important;">Harish R</h3>
 										<h4 style="color:white!important;">Student chairman</h4>
-										<h5 style="color:white!important;">7010020359</h5>
+										<h5 style="color:white!important;">
+											<a href="https://wa.me/+917010020359" target="_blank" class="social-icon dark inline-block si-borderless mb-0 si-whatsapp">
+												<i class="icon-whatsapp"></i>
+												<i class="icon-whatsapp"></i>
+											</a>
+											<a href="tel:+917010020359" class="social-icon dark inline-block si-borderless mb-0 si-phone">
+												<i class="icon-phone"></i>
+												<i class="icon-phone"></i>
+											</a>
+										</h5>
 									</div>
 									<div class="col-sm-12 col-md-3 text-center" data-animate="bounceIn" data-delay="150">
 										<h3 style="color:white!important;">Tamil Udayan M</h3>
 										<h4 style="color:white!important;">Student Secretary</h4>
-										<h5 style="color:white!important;">8072624739</h5>
+										<h5 style="color:white!important;">
+											<a href="https://wa.me/+918072624739" target="_blank" class="social-icon dark inline-block si-borderless mb-0 si-whatsapp">
+												<i class="icon-whatsapp"></i>
+												<i class="icon-whatsapp"></i>
+											</a>
+											<a href="tel:+918072624739" class="social-icon dark inline-block si-borderless mb-0 si-phone">
+												<i class="icon-phone"></i>
+												<i class="icon-phone"></i>
+											</a>
+										</h5>
 									</div>
 									<div class="col-sm-12 col-md-2 text-center" data-animate="bounceIn" data-delay="250" >
 										<h3 style="color:white!important;">Johnson J</h3>
 										<h4 style="color:white!important;">Cultural Convener</h4>
-										<h5 style="color:white!important;">9655762620</h5>
+										<h5 style="color:white!important;">
+											<a href="https://wa.me/+919655762620" target="_blank" class="social-icon dark inline-block si-borderless mb-0 si-whatsapp">
+												<i class="icon-whatsapp"></i>
+												<i class="icon-whatsapp"></i>
+											</a>
+											<a href="tel:+919655762620" class="social-icon dark inline-block si-borderless mb-0 si-phone">
+												<i class="icon-phone"></i>
+												<i class="icon-phone"></i>
+											</a>
+										</h5>
 									</div>
-									<div class="col-sm-12 col-md-2 text-center" data-animate="bounceIn" data-delay="350">
+									<div class="col-sm-12 col-md-2 text-center" target="_blank" data-animate="bounceIn" data-delay="350">
 										<h3 style="color:white!important;">Barnabas D</h3>
 										<h4 style="color:white!important;">Sponsorship Head</h4>
-										<h5 style="color:white!important;">9529983737</h5>
+										<h5 style="color:white!important;">
+											<a href="https://wa.me/+919529983737" class="social-icon dark inline-block si-borderless mb-0 si-whatsapp">
+												<i class="icon-whatsapp"></i>
+												<i class="icon-whatsapp"></i>
+											</a>
+											<a href="tel:+919529983737" class="social-icon dark inline-block si-borderless mb-0 si-phone">
+												<i class="icon-phone"></i>
+												<i class="icon-phone"></i>
+											</a>
+										</h5>
 									</div>
-									<div class="col-sm-12 col-md-3 text-center" data-animate="bounceIn" data-delay="350">
+									<div class="col-sm-12 col-md-3 text-center" target="_blank" data-animate="bounceIn" data-delay="350">
 										<h3 style="color:white!important;">Gopi Venkat S R</h3>
 										<h4 style="color:white!important;">Sponsorship Head</h4>
-										<h5 style="color:white!important;">9677379582</h5>
+										<h5 style="color:white!important;">
+											<a href="https://wa.me/+919677379582" class="social-icon dark inline-block si-borderless mb-0 si-whatsapp">
+												<i class="icon-whatsapp"></i>
+												<i class="icon-whatsapp"></i>
+											</a>
+											<a href="tel:+919677379582" class="social-icon dark inline-block si-borderless mb-0 si-phone">
+												<i class="icon-phone"></i>
+												<i class="icon-phone"></i>
+											</a>
+										</h5>
 									</div>
 								</div>
 							</div>

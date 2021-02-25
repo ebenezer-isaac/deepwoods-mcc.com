@@ -75,10 +75,15 @@
 										if ($conn->connect_error) {
 											die("Connection failed: " . $conn->connect_error);
 										}?>
-										<div class="col-12">
+										<div class='col-12'>
 											<div class="form-group">
 												<label>Event Passes</label>
-												<select class="form-control required" name="event-registration-passes" id="event_type" onchange="javascript:updateEvents(this.value)">
+												<select 
+													<?php if(isset($_GET["event_type_id"])&&isset($_GET["event_id"])){
+														echo " disabled ";
+													}
+													?>
+													class="form-control required" name="event-registration-passes" id="event_type" onchange="javascript:updateEvents(this.value)">
 													<option value="">-- Select One --</option>
 													<?php
 														$sql = "select * from event_type";
@@ -171,8 +176,8 @@
 										</div>
 										<div class="col-12">
 											<button type="submit" name="event-registration-submit" class="btn btn-secondary">Register</button>
+												<a class='btn btn-secondary' href="javascript:window.location.replace(location.protocol + '//' + location.host + location.pathname);">Reset</a>
 										</div>
-
 										<input type="hidden" name="prefix" value="event-registration-">
 									</form>
 								</div>

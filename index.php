@@ -114,7 +114,7 @@
 						</div>
 					</div>
 			<div class="content-wrap py-0">
-				<div id="section_intro" class="section parallax min-vh-100 m-0 border-0 d-flex" style = "background: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)), url('img/gallery/pic_028.jpg') no-repeat center bottom / auto 140%" >
+				<div id="section_intro" class="section parallax min-vh-100 m-0 border-0 d-flex" style = "background: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)), url('img/gallery/pic_028.jpg') no-repeat center bottom / auto 150%" >
 					<div class="vertical-middle">
 						<div class="container">
 							<div class="row" >

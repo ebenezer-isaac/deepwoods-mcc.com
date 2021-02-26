@@ -122,7 +122,8 @@
 			?>
 			<section id="page-title" style='background:#333333;'>
 				<div class="container clearfix">
-					<h1 style='color:white'>Image Gallery</h1>
+					<h1 style='color:white'>Image Gallery</h1><br>
+					<a href="registration.php" data-scrollto="#section-about" data-offset="70"  data-animate="fadeInUp" data-delay="600" class="button m-0 button-circle button-large text-white" style="background-color: #03A2D0;"><i class="icon-line-arrow-left"></i>Go Home</a>
 				</div>
 			</section>
 			<section id="content" style='background:#333333;'>

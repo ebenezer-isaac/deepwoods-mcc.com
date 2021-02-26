@@ -35,15 +35,16 @@
 				$page = "About";
 				include "header.php" 
 			?>
-			<section id="page-title" class="page-title-parallax page-title-dark page-title-right include-header" style="padding: 250px 0; background-image: url('images/about/me-parallax.jpg'); background-size: cover; background-position: center center;" data-bottom-top="background-position:0px 440px;" data-top-bottom="background-position:0px -500px;">
-				<div class="container clearfix" style="font-size: 35px;">
+			<section id="page-title"  class="slider-element slider-parallax min-vh-100 dark" style="padding: 250px 0; background: linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)), url('img/gallery/pic_042.jpg') no-repeat center bottom / auto 150%;" >
+				<div class="container clearfix" style="font-size: 35px;text-align: right;">
 					<img src="img/deepwoods.png" alt="Canvas Logo" class='px-0 col-lg-4 mr-lg-0 mt-2 mb-2'> 2021
 					<h3 style='color:white'>Madras Christian College</h3>
+					<a href="registration.php" data-scrollto="#section-about" data-offset="70"  data-animate="fadeInUp" data-delay="600" class="button m-0 button-circle button-large text-white" style="background-color: #03A2D0;"><i class="icon-line-arrow-left"></i>Go Home</a>
 				</div>
 			</section>
 			<section  style="background: #333333; color: white" data-bottom-top="background-position:-200px -250px;" data-top-bottom="background-position:0px 0px;">
 				<div class="content-wrap py-0">
-					<div id="section_intro1" class="section parallax min-vh-100 m-0 border-0 d-flex" >
+					<div id="section_intro1" style="background: linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)), url('img/gallery/pic_042.jpg') no-repeat center bottom / auto 150%" class="section parallax min-vh-100 m-0 border-0 d-flex" >
 						<div class="vertical-middle">
 							<div class="container">
 								<div class="row" >
@@ -54,18 +55,10 @@
 									</div>
 								</div>
 							</div>
-							<script>
-								if (screen.width <500){
-									document.getElementById("section_intro1").style.background = "linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)), url('img/gallery/pic_028.jpg') no-repeat center top / 450%";
-								}else{
-									document.getElementById("section_intro1").style.background = "linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)), url('img/gallery/pic_028.jpg') no-repeat right top / 120%"
-								}
-							</script>
 						</div>
 					</div>
 				</div>
 			</section>
-
 			<section  style="background: #333333; color: white" >
 				<div class="content-wrap py-0">
 					<div class="section parallax m-0 border-0 d-flex" >
@@ -100,7 +93,7 @@
 			</section>
 			<section  style="background: #333333; color: white" data-bottom-top="background-position:-200px -250px;" data-top-bottom="background-position:0px 0px;">
 				<div class="content-wrap py-0">
-					<div id="section_intro2" class="section parallax min-vh-100 m-0 border-0 d-flex" >
+					<div id="section_intro2" style="background: linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)), url('img/gallery/pic_042.jpg') no-repeat center bottom / auto 150%" class="section parallax min-vh-100 m-0 border-0 d-flex" >
 						<div class="vertical-middle">
 							<div class="container">
 								<div class="row" >
@@ -111,13 +104,6 @@
 									</div>
 								</div>
 							</div>
-							<script>
-								if (screen.width <500){
-									document.getElementById("section_intro2").style.background = "linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)), url('img/gallery/pic_028.jpg') no-repeat center top / 450%";
-								}else{
-									document.getElementById("section_intro2").style.background = "linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)), url('img/gallery/pic_028.jpg') no-repeat right top / 120%"
-								}
-							</script>
 						</div>
 					</div>
 				</div>
@@ -137,11 +123,12 @@
 												<i class="icon-whatsapp"></i>
 												<i class="icon-whatsapp"></i>
 											</a>
-											<a href="tel:+917010020359" class="social-icon dark inline-block si-borderless mb-0 si-phone">
+											<a href="tel:+917010020359" class="social-icon dark inline-block si-borderless mb-0 si-linkedin">
 												<i class="icon-phone"></i>
 												<i class="icon-phone"></i>
 											</a>
 										</h5>
+										<hr style="border: 1px solid white;">
 									</div>
 									<div class="col-sm-12 col-md-3 text-center" data-animate="bounceIn" data-delay="150">
 										<h3 style="color:white!important;">Tamil Udayan M</h3>
@@ -151,11 +138,12 @@
 												<i class="icon-whatsapp"></i>
 												<i class="icon-whatsapp"></i>
 											</a>
-											<a href="tel:+918072624739" class="social-icon dark inline-block si-borderless mb-0 si-phone">
+											<a href="tel:+918072624739" class="social-icon dark inline-block si-borderless mb-0 si-linkedin">
 												<i class="icon-phone"></i>
 												<i class="icon-phone"></i>
 											</a>
 										</h5>
+										<hr style="border: 1px solid white;">
 									</div>
 									<div class="col-sm-12 col-md-2 text-center" data-animate="bounceIn" data-delay="250" >
 										<h3 style="color:white!important;">Johnson J</h3>
@@ -165,11 +153,12 @@
 												<i class="icon-whatsapp"></i>
 												<i class="icon-whatsapp"></i>
 											</a>
-											<a href="tel:+919655762620" class="social-icon dark inline-block si-borderless mb-0 si-phone">
+											<a href="tel:+919655762620" class="social-icon dark inline-block si-borderless mb-0 si-linkedin">
 												<i class="icon-phone"></i>
 												<i class="icon-phone"></i>
 											</a>
 										</h5>
+										<hr style="border: 1px solid white;">
 									</div>
 									<div class="col-sm-12 col-md-2 text-center" target="_blank" data-animate="bounceIn" data-delay="350">
 										<h3 style="color:white!important;">Barnabas D</h3>
@@ -179,11 +168,12 @@
 												<i class="icon-whatsapp"></i>
 												<i class="icon-whatsapp"></i>
 											</a>
-											<a href="tel:+919529983737" class="social-icon dark inline-block si-borderless mb-0 si-phone">
+											<a href="tel:+919529983737" class="social-icon dark inline-block si-borderless mb-0 si-linkedin">
 												<i class="icon-phone"></i>
 												<i class="icon-phone"></i>
 											</a>
 										</h5>
+										<hr style="border: 1px solid white;">
 									</div>
 									<div class="col-sm-12 col-md-3 text-center" target="_blank" data-animate="bounceIn" data-delay="350">
 										<h3 style="color:white!important;">Gopi Venkat S R</h3>
@@ -193,21 +183,15 @@
 												<i class="icon-whatsapp"></i>
 												<i class="icon-whatsapp"></i>
 											</a>
-											<a href="tel:+919677379582" class="social-icon dark inline-block si-borderless mb-0 si-phone">
+											<a href="tel:+919677379582" class="social-icon dark inline-block si-borderless mb-0 si-linkedin">
 												<i class="icon-phone"></i>
 												<i class="icon-phone"></i>
 											</a>
 										</h5>
+										<hr style="border: 1px solid white;">
 									</div>
 								</div>
 							</div>
-							<script>
-								if (screen.width <500){
-									document.getElementById("section_intro").style.background = "linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)), url('img/gallery/pic_028.jpg') no-repeat center top / 450%";
-								}else{
-									document.getElementById("section_intro").style.background = "linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)), url('img/gallery/pic_028.jpg') no-repeat right top / 120%"
-								}
-							</script>
 						</div>
 					</div>
 				</div>

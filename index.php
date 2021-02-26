@@ -433,7 +433,7 @@
 						</div>
 					</div>
 					<div class="row align-items-stretch">
-						<div class="col-lg-2 col-md-3 col-sm-6 text-center">">
+						<div class="col-lg-2 col-md-3 col-sm-6 text-center">
 							<a href="#">
 								<img src="img/sponsors/7up.png" class = 'sponsor m-4'>
 							</a>

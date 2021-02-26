@@ -84,11 +84,19 @@
 			</div>
 			<div class='row'>
 				<div class="col-md-6 col-sm-12">
-					Copyrights &copy; 2021 All Rights Reserved by Madras Christian College.
+					Copyrights &copy; 2021 All Rights Reserved by <a href='https://www.mcc.edu.in/' class="author_name">Madras Christian College</a>.
 				</div>
 				<div class="col-md-6 col-sm-12 text-lg-right">
-					Website Developed and Maintained by <a href='https://ebenezer-isaac.github.io/'>Ebenezer Isaac</a>
+					Website Developed and Maintained by <a href='https://ebenezer-isaac.github.io/' class="author_name">Ebenezer Isaac</a>
 				</div>
+				<style>
+					.author_name{
+						color:white;
+					}
+					.author_name:hover{
+						color:#03A1CF;
+					}
+				</style>
 			</div>
 		</div>
 	</div>

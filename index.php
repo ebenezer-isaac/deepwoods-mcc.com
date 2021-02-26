@@ -55,11 +55,20 @@
 					list-style-position: inside;
 				}
 			}
+			@media screen and (min-width: 721px) {
+				.sponsor {
+					width:75%;
+				}
+			}
+			@media screen and (max-width: 720px) {
+				.sponsor {
+					width:40%;
+				}
+			}
 		</style>
 	</head>
 	<script>
 		function reAdjust(){
-			//console.log("hey "+document.body.clientWidth+" : "+document.body.offsetWidth);
 			if(document.body.clientWidth <975){
 				document.getElementById("extra_image").style.display="none";
 			}else if (document.body.clientWidth <800){
@@ -71,6 +80,8 @@
 				document.getElementById("flip1").classList.add("m-1");
 				document.getElementById("flip2").classList.add("m-1");
 				document.getElementById("flip3").classList.add("m-1");
+			}else{
+				document.getElementById("extra_image").style.display="block";
 			}
 		}
 	</script>
@@ -416,72 +427,61 @@
 						<div class="mx-auto center" style="max-width: 900px;">
 							<div class="emphasis-title">
 								<h2 class="font-weight-light text-white mt-6">
-									<br>Our Sponsors
+									<br>Sponsored By
 								</h2>
 							</div>
 						</div>
 					</div>
-					
 					<div class="row align-items-stretch">
-						<div class="d-none d-md-block" style="color:white!important;"></div>
-						<div class="col-12">
-							<div class="row align-items-stretch clearfix">
-								<div class='col-md-1'></div>
-								<div class="col-sm-6 col-md-2">
-									<a href="#">
-										<img src="img/sponsors/7up.png" style="width:100%;object-fit: contain;">
-									</a>
-								</div>
-								<div class="col-sm-6 col-md-2">
-									<a href="#">
-										<img src="img/sponsors/airtel.png" style="width:100%;object-fit: contain;">
-									</a>
-								</div>
-								<div class="col-sm-6 col-md-2">
-									<a href="#">
-										<img src="img/sponsors/bajaj.png" style="width:100%;object-fit: contain;">
-									</a>
-								</div>
-								<div class="col-sm-6 col-md-2">
-									<a href="#">
-										<img src="img/sponsors/mahindra.png" style="width:100%;object-fit: contain;">
-									</a>
-								</div>
-								<div class="col-sm-6 col-md-2">
-									<a href="#">
-										<img src="img/sponsors/mrf.png" style="width:100%;object-fit: contain;">
-									</a>
-								</div>
-								<div class='col-md-1'></div>
-								<div class='col-md-1'></div>
-								<div class="col-sm-6 col-md-2">
-									<a href="#">
-										<img src="img/sponsors/pepsi.png" style="width:100%;object-fit: contain;">
-									</a>
-								</div>
-								<div class="col-sm-6 col-md-2">
-									<a href="#">
-										<img src="img/sponsors/poorvika.png" style="width:100%;object-fit: contain;">
-									</a>
-								</div>
-								<div class="col-sm-6 col-md-2">
-									<a href="#">
-										<img src="img/sponsors/sangeetha.png" style="width:100%;object-fit: contain;">
-									</a>
-								</div>
-								<div class="col-sm-6 col-md-2">
-									<a href="#">
-										<img src="img/sponsors/suzuki.png" style="width:100%;object-fit: contain;">
-									</a>
-								</div>
-								<div class="col-sm-6 col-md-2">
-									<a href="#">
-										<img src="img/sponsors/zebronics.png" style="width:100%;object-fit: contain;">
-									</a>
-								</div>
-								<div class='col-md-1'></div>
-							</div>
-							<br><br><br>
+						<div class="col-lg-2 col-md-3 col-sm-6 text-center">">
+							<a href="#">
+								<img src="img/sponsors/7up.png" class = 'sponsor m-4'>
+							</a>
+						</div>
+						<div class="col-lg-2 col-md-3 col-sm-6 text-center">
+							<a href="#">
+								<img src="img/sponsors/airtel.png" class = 'sponsor m-4'>
+							</a>
+						</div>
+						<div class="col-lg-2 col-md-3 col-sm-6 text-center">
+							<a href="#">
+								<img src="img/sponsors/bajaj.png" class = 'sponsor m-4'>
+							</a>
+						</div>
+						<div class="col-lg-2 col-md-3 col-sm-6 text-center">
+							<a href="#">
+								<img src="img/sponsors/mahindra.png" class = 'sponsor m-4'>
+							</a>
+						</div>
+						<div class="col-lg-2 col-md-3 col-sm-6 text-center">
+							<a href="#">
+								<img src="img/sponsors/mrf.png" class = 'sponsor m-4'>
+							</a>
+						</div>
+						<div class="col-lg-2 col-md-3 col-sm-6 text-center">
+							<a href="#">
+								<img src="img/sponsors/pepsico.png" class = 'sponsor m-4'>
+							</a>
+						</div>
+						<div class="col-lg-2 col-md-3 col-sm-6 text-center">
+							<a href="#">
+								<img src="img/sponsors/poorvika.png" class = 'sponsor m-4'>
+							</a>
+						</div>
+						<div class="col-lg-2 col-md-3 col-sm-6 text-center">
+							<a href="#">
+								<img src="img/sponsors/sangeetha.png" class = 'sponsor m-4'>
+							</a>
+						</div>
+						<div class="col-lg-2 col-md-3 col-sm-6 text-center">
+							<a href="#">
+								<img src="img/sponsors/suzuki.png" class = 'sponsor m-4'>
+							</a>
+						</div>
+						<div class="col-lg-2 col-md-3 col-sm-6 text-center">
+							<a href="#">
+								<img src="img/sponsors/zebronics.png" class = 'sponsor m-4'>
+							</a>
 						</div>
 					</div>
 					<div id='contact_scroll'></div>

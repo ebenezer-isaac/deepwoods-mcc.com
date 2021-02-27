@@ -65,6 +65,7 @@
 					width:40%;
 				}
 			}
+
 		</style>
 	</head>
 	<script>
@@ -192,7 +193,7 @@
 													$sql = "select event_id, name from events where `event_type_id`=1;";
 													$result = $conn->query($sql);
 													while($event = $result->fetch_assoc()) {	
-														echo "<li class='event_list_item' id='event_link_".$event["event_id"]."' value='".$event["event_id"]."' href='registration.php?event_type_id=1&event_id=".$event["event_id"]."' class='col'>".$event["name"]."</li>";
+														echo "<li class='event_list_item'><a id='event_link_".$event["event_id"]."' value='".$event["event_id"]."' href='registration.php?event_type_id=1&event_id=".$event["event_id"]."' class='col event_list_text event_list_item'>".$event["name"]."</a></li>";
 													}
 												?>
 											</ol>
@@ -224,7 +225,7 @@
 													$sql = "select event_id, name from events where `event_type_id`=2;";
 													$result = $conn->query($sql);
 													while($event = $result->fetch_assoc()) {	
-														echo "<li class='event_list_item' id='event_link_".$event["event_id"]."' value='".$event["event_id"]."' href='registration.php?event_type_id=2&event_id=".$event["event_id"]."' class='col'>".$event["name"]."</li>";
+														echo "<li class='event_list_item'><a id='event_link_".$event["event_id"]."' value='".$event["event_id"]."' href='registration.php?event_type_id=2&event_id=".$event["event_id"]."' class='col event_list_text event_list_item'>".$event["name"]."</a></li>";
 													}
 												?>
 											</ol>
@@ -256,7 +257,7 @@
 													$sql = "select event_id, name from events where `event_type_id`=3;";
 													$result = $conn->query($sql);
 													while($event = $result->fetch_assoc()) {	
-														echo "<li class='event_list_item' id='event_link_".$event["event_id"]."' value='".$event["event_id"]."' href='registration.php?event_type_id=3&event_id=".$event["event_id"]."' class='col'>".$event["name"]."</li>";
+														echo "<li class='event_list_item'><a id='event_link_".$event["event_id"]."' value='".$event["event_id"]."' href='registration.php?event_type_id=3&event_id=".$event["event_id"]."' class='col event_list_text event_list_item'>".$event["name"]."</a></li>";
 													}
 												?>
 											</ol>

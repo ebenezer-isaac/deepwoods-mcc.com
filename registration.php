@@ -11,9 +11,9 @@
 		<meta name="keywords" content="deepwoods, deep woods, deepwoods mcc, mcc cultural event, mcc event, mcc student union, mcc, deepwoods chennai">
 		<meta property="og:title" content="Deepwoods 2021 | MCC" />
 		<meta property="og:site_name" content="Click To Register Now">
-		<meta property="og:url" content="https://www.ebenezer-isaac.com/demo/deepwoods.in/about.php" />
+		<meta property="og:url" content="https://www.deepwoods-mcc.com/about.php" />
 		<meta property="og:description" content="Extravagant Cultural Show">
-		<meta property="og:image" content="https://www.ebenezer-isaac.com/demo/deepwoods.in/img/logo_og.png">
+		<meta property="og:image" content="https://www.deepwoods-mcc.com/img/logo_og.png">
 		<meta property="og:image:width" content="490" />
 		<meta property="og:image:height" content="490" />
 		<meta property="og:type" content="website" />
@@ -175,8 +175,9 @@
 											<input type="text" id="event-registration-botcheck" name="event-registration-botcheck" value="" />
 										</div>
 										<div class="col-12">
-											<button type="submit" name="event-registration-submit" class="btn btn-secondary">Register</button>
-												<a class='btn btn-secondary' href="javascript:window.location.replace(location.protocol + '//' + location.host + location.pathname);">Reset</a>
+											<button disabled type="submit" name="event-registration-submit" class="btn btn-secondary">Register</button>
+												<a class='btn btn-secondary' href="javascript:window.location.replace(location.protocol + '//' + location.host + location.pathname);">Reset</a><br>
+												<span style='color:red'>Registrations will start soon</span>
 										</div>
 										<input type="hidden" name="prefix" value="event-registration-">
 									</form>

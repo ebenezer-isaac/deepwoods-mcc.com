@@ -11,9 +11,9 @@
 		<meta name="keywords" content="deepwoods, deep woods, deepwoods mcc, mcc cultural event, mcc event, mcc student union, mcc, deepwoods chennai">
 		<meta property="og:title" content="Deepwoods 2021 | MCC" />
 		<meta property="og:site_name" content="Click To Register Now">
-		<meta property="og:url" content="https://www.ebenezer-isaac.com/demo/deepwoods.in/about.php" />
+		<meta property="og:url" content="https://www.deepwoods-mcc.com/about.php" />
 		<meta property="og:description" content="Extravagant Cultural Show">
-		<meta property="og:image" content="https://www.ebenezer-isaac.com/demo/deepwoods.in/img/logo_og.png">
+		<meta property="og:image" content="https://www.deepwoods-mcc.com/img/logo_og.png">
 		<meta property="og:image:width" content="490" />
 		<meta property="og:image:height" content="490" />
 		<meta property="og:type" content="website" />

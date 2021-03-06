@@ -28,6 +28,7 @@
 		<link rel="stylesheet" href="css/magnific-popup.css" type="text/css" />
 		<link rel="stylesheet" href="css/fonts.css" type="text/css" />
 		<link rel="stylesheet" href="css/custom.css" type="text/css" />
+		<link rel="stylesheet" href="css/bs-filestyle.css" type="text/css" />
 		<style>
 			.form-group > label.error {
 				display: block !important;
@@ -39,6 +40,10 @@
 			.form-group input[type="number"] ~ label.error,
 			.form-group select ~ label.error,
 			.form-group textarea ~ label.error { display: none !important; }
+			.file-caption.icon-visible .file-caption-name {
+				font-family: 'Lato', sans-serif;
+				color: #666;
+			}
 		</style>
 	</head>
 	<body class="stretched">
@@ -56,16 +61,10 @@
 			<section id="content">
 				<div class="content-wrap">
 					<div class="container clearfix">
-						<div class="form-widget">
 							<div class="form-result"></div>
 							<div class="row">
 								<div class="col-lg-12">
-									<form class="row" id="event-registration" action="include/form.php" method="post" enctype="multipart/form-data">
-										<div class="form-process">
-											<div class="css3-spinner">
-												<div class="css3-spinner-scaler"></div>
-											</div>
-										</div>
+									<form class="row" action="order.php" method="post" enctype="multipart/form-data">
 										<?php
 										$servername = "sql290.main-hosting.eu";
 										$username = "u117204720_deepwoods";
@@ -77,7 +76,7 @@
 										}?>
 										<div class='col-12'>
 											<div class="form-group">
-												<label>Event Passes</label>
+												<label>Event Category</label>
 												<select 
 													<?php if(isset($_GET["event_type_id"])&&isset($_GET["event_id"])){
 														echo " disabled ";
@@ -97,8 +96,8 @@
 										</div>
 										<div class="col-12">
 											<div class="form-group">
-												<label>Event Passes</label>
-												<select class="form-control required" name="event-registration-passes" id="event_name">
+												<label>Event</label>
+												<select class="form-control required" name="event" id="event_name">
 													<option value="">-- Select One --</option>
 												</select>
 											</div>
@@ -148,20 +147,29 @@
 										</script>
 										<div class="col-6 form-group">
 											<label>First Name:</label>
-											<input type="text" name="event-registration-first-name" id="event-registration-first-name" class="form-control required" value="" placeholder="Enter your First Name">
+											<input type="text" name="first_name" id="event-registration-first-name" class="form-control required" value="" placeholder="Enter your First Name">
 										</div>
 										<div class="col-6 form-group">
 											<label>Last Name:</label>
-											<input type="text" name="event-registration-last-name" id="event-registration-last-name" class="form-control required" value="" placeholder="Enter your Last Name">
+											<input type="text" name="last_name" id="event-registration-last-name" class="form-control required" value="" placeholder="Enter your Last Name">
 										</div>
 										<div class="col-12 form-group">
 											<label>Email:</label>
-											<input type="email" name="event-registration-email" id="event-registration-email" class="form-control required" value="" placeholder="Enter your Email Address">
+											<input type="email" name="email" id="event-registration-email" class="form-control required" value="" placeholder="Enter your Email Address">
+										</div>
+										<div class="col-12 form-group">
+											<label>Phone:</label>
+											<input type="tel" id="phone" name="phone" class="form-control required" placeholder="Enter your WhatsApp Number in 9876543210 format" pattern="[0-9]{10}" required>
+										</div>
+										<div class="col-12 form-group">
+											<label>Passport Size Photo of Registrant for Verification:</label>
+											<input type="file" accept="image/x-png,image/jpeg" onchange='javascript:validation()'id="passport" name="passport" class="form-control required" required>
+											<span style='color:grey'>File Size cannot be more than 500Kb</span>
 										</div>
 										<div class="col-12">
 											<div class="form-group">
 												<label>How did you hear about the Event?</label>
-												<select class="form-control required" name="event-registration-know-us" id="event-registration-know-us">
+												<select class="form-control required" name="reach" id="event-registration-know-us">
 													<option value="">-- Select One --</option>
 													<option value="Google">Google</option>
 													<option value="Social Media">Social Media</option>
@@ -174,8 +182,14 @@
 										<div class="col-12 d-none">
 											<input type="text" id="event-registration-botcheck" name="event-registration-botcheck" value="" />
 										</div>
+										<div class="col-12 form-group mb-4">
+											<label for="website-cost-design" class="mb-3">Declaration</label><br>
+											<input type="checkbox" onclick='javascript:validation()' name="declaration" id="declaration-no" autocomplete="off" class="required valid" data-price="0" value="No" style='height:20px;width:20px'>
+											<span>I confirm that the above provided information is true to my best knowledge and that I have rechecked all the details and own responsibility for their discrepency if there be any.</span>
+											<br>
+										</div>
 										<div class="col-12">
-											<button disabled type="submit" name="event-registration-submit" class="btn btn-secondary">Register</button>
+											<button disabled type="submit" id='registration_button' name="event-registration-submit" class="btn btn-secondary">Register</button>
 												<a class='btn btn-secondary' href="javascript:window.location.replace(location.protocol + '//' + location.host + location.pathname);">Reset</a><br>
 												<span style='color:red'>Registrations will start soon</span>
 										</div>
@@ -183,7 +197,6 @@
 									</form>
 								</div>
 							</div>
-						</div>
 					</div>
 				</div>
 			</section>
@@ -191,14 +204,48 @@
 				include "footer.php" 
 			?>
 		</div>
-		<div id="gotoTop" class="icon-angle-up"></div>
-		<script src="js/jquery.js"></script>
-		<script src="js/plugins.min.js"></script>
-		<script src="js/functions.js"></script>
 		<script>
 			jQuery(document).ready( function(){
+				$("#jobs-application-resume").fileinput({
+					required: true,
+					browseClass: "btn btn-secondary",
+					browseIcon: "",
+					removeClass: "btn btn-danger",
+					removeLabel: "",
+					removeIcon: "<i class='icon-trash-alt1'></i>",
+					showUpload: true
+				});
 				
 			})
-		</script>
+			function validation(){
+				var fileInput = $('#passport');
+			    var maxSize = 500000;
+		        if(fileInput.get(0).files.length){
+		            var fileSize = fileInput.get(0).files[0].size; // in bytes
+		            if(fileSize>maxSize){
+		                alert('File Size is more than 500Kb');
+		                document.getElementById('registration_button').disabled=true;
+		            }else{
+		                if(document.getElementById('declaration-no').checked){
+							document.getElementById('registration_button').disabled=false;
+						}else{
+							document.getElementById('registration_button').disabled=true;
+						}
+		            }
+		        }else{
+		            alert('Please upload Passport Photo of Registrant');
+		            
+		        }
+			}
+	    </script>
+		<div id="gotoTop" class="icon-angle-up"></div>
+		<script src="js/jquery.js"></script>
+		<script src="js/bs-filestyle.js"></script>
+		<script src="js/plugins.min.js"></script>
+		<script src="js/functions.js"></script>
 	</body>
 </html>
+<?php
+	$page="Registration";
+	include 'logger.php';
+?>

@@ -208,3 +208,7 @@
 		</script>
 	</body>
 </html>
+<?php
+	$page="Gallery";
+	include 'logger.php';
+?>

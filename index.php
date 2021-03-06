@@ -122,7 +122,7 @@
 			<div class="clear"></div>
 					<div class="section m-0" style="background: #333333;">
 						<div class="heading-block center border-bottom-0 m-1">
-							<h2 style="color:white;">"India's First Live Cultural Show"</h2>
+							<h2 style="color:white;">"India's First Live Cultural Show after Pandemic"</h2>
 						</div>
 					</div>
 			<div class="content-wrap py-0">
@@ -566,3 +566,7 @@
 	</script>
 	</body>
 </html>
+<?php
+	$page="Index";
+	include 'logger.php';
+?>

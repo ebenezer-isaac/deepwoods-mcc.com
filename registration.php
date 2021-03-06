@@ -98,7 +98,7 @@
 											<div class="form-group">
 												<label>Event</label>
 												<select class="form-control required" name="event" id="event_name">
-													<option value="">-- Select One --</option>
+													<option value="0">-- Select One --</option>
 												</select>
 											</div>
 										</div>
@@ -224,10 +224,15 @@
 		            var fileSize = fileInput.get(0).files[0].size; // in bytes
 		            if(fileSize>maxSize){
 		                alert('File Size is more than 500Kb');
+		                document.getElementById('passport').value = "";
 		                document.getElementById('registration_button').disabled=true;
 		            }else{
-		                if(document.getElementById('declaration-no').checked){
-							document.getElementById('registration_button').disabled=false;
+		            	if(document.getElementById('event_name').selectedIndex>0){
+							if(document.getElementById('declaration-no').checked){
+								document.getElementById('registration_button').disabled=false;
+							}else{
+								document.getElementById('registration_button').disabled=true;
+							}
 						}else{
 							document.getElementById('registration_button').disabled=true;
 						}

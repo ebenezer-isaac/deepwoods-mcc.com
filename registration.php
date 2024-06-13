@@ -251,6 +251,6 @@
 	</body>
 </html>
 <?php
-	$page="Registration";
+	$page="Deepwoods Registration";
 	include 'logger.php';
 ?>

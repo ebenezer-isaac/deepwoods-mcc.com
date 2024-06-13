@@ -209,6 +209,6 @@
 	</body>
 </html>
 <?php
-	$page="Gallery";
+	$page="Deepwoods Gallery";
 	include 'logger.php';
 ?>

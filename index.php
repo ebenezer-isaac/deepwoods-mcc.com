@@ -567,6 +567,6 @@
 	</body>
 </html>
 <?php
-	$page="Index";
+	$page="Deepwoods Index";
 	include 'logger.php';
 ?>

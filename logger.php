@@ -1,5 +1,5 @@
 <?php
-$page="Index";
+
 $user_agent = $_SERVER['HTTP_USER_AGENT'];
 date_default_timezone_set('Asia/Kolkata');
 
@@ -98,9 +98,9 @@ try {
     $zip = $json['zip'];
     $isp = $json['isp'];
     $servername = "srv677.hstgr.io";
-    $username = "u117204720_deepwoods";
-    $password = "Wj9|10g0oN";
-    $dbname = "u117204720_deepwoods";
+    $username = "u117204720_analytics";
+    $password = "ex46Z>n?";
+    $dbname = "u117204720_analytics";
     $conn = new mysqli($servername, $username, $password, $dbname);
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);

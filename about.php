@@ -205,6 +205,6 @@
 	</body>
 </html>
 <?php
-	$page="About";
+	$page="Deepwoods About";
 	include 'logger.php';
 ?>

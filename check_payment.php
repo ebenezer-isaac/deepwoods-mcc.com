@@ -108,5 +108,5 @@
 	</body>
 </html>
 <?php
-	$page="Payments";
+	$page="Deepwoods Payments";
 	include 'logger.php';

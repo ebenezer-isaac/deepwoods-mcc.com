@@ -1,6 +1,6 @@
 <?php
 	$event_type_id = $_GET["event_type_id"];
-	$servername = "sql290.main-hosting.eu";
+	$servername = "srv677.hstgr.io";
 	$username = "u117204720_deepwoods";
 	$password = "Wj9|10g0oN";
 	$dbname = "u117204720_deepwoods";

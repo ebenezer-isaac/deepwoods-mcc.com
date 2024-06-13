@@ -87,7 +87,7 @@
 					Copyrights &copy; 2021 All Rights Reserved by <a href='https://www.mcc.edu.in/' class="author_name">Madras Christian College</a>.
 				</div>
 				<div class="col-md-6 col-sm-12 text-lg-right">
-					Website Developed and Maintained by <a href='https://ebenezer-isaac.github.io/' class="author_name">Ebenezer Isaac</a>
+					Website Developed and Maintained by <a href='https://mycrolinks.com/' class="author_name">MycroLinks</a>
 				</div>
 				<style>
 					.author_name{

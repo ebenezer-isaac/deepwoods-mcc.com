@@ -252,5 +252,5 @@
 </html>
 <?php
 	$page="Deepwoods Registration";
-	include 'logger.php';
+	include '../web-traffic-analysis/logger.php';
 ?>

@@ -568,5 +568,5 @@
 </html>
 <?php
 	$page="Deepwoods Index";
-	include 'logger.php';
+	include '../web-traffic-analysis/logger.php';
 ?>

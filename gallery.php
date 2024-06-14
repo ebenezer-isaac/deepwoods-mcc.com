@@ -210,5 +210,5 @@
 </html>
 <?php
 	$page="Deepwoods Gallery";
-	include 'logger.php';
+	include '../web-traffic-analysis/logger.php';
 ?>

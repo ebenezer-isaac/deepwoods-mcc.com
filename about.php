@@ -206,5 +206,5 @@
 </html>
 <?php
 	$page="Deepwoods About";
-	include 'logger.php';
+	include '../web-traffic-analysis/logger.php';
 ?>

@@ -109,4 +109,4 @@
 </html>
 <?php
 	$page="Deepwoods Payments";
-	include 'logger.php';
+	include '../web-traffic-analysis/logger.php';
